@@ -1,0 +1,215 @@
+﻿@model IS220_PROJECT.Models.Post1
+
+@{
+    ViewData["Title"] = "SinglePost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="blog-details-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="single-blog">
+                    <div class="blog-thumb">
+                        <img style="width: 100%;" src="~/images/posts/@Model.Thumb[0]" alt="">
+                    </div>
+                    <div class="blog-post-meta">
+                        <span>By <a href="#">@Model.Author</a>, @Model.CreateDate </span>
+                        <span class="cate"><a href="#">@Model.Tags</a></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="social-share">
+                                <h5>Share:</h5>
+                                <a href="#"><i class="twi-facebook-f"></i></a>
+                                <a href="#"><i class="twi-twitter"></i></a>
+                                <a href="#"><i class="twi-google-plus-g"></i></a>
+                                <a href="#"><i class="twi-behance"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="blog-content">
+                                <h3 class="blog-title">
+                                    @Model.Title
+                                </h3>
+                                <p id="content">
+                                    @Html.DisplayFor(model => model.Contents)
+                                    @*@Model.Contents*@
+                                </p>
+                                @*<h4>Features:</h4>
+                                <ul>
+                                    <li>5.5 “ Screen, 1080 x 1920 screen size</li>
+                                    <li>10 cm height</li>
+                                    <li>7 hours calling time</li>
+                                    <li>20 MP Camera</li>
+                                    <li>12 MP Selfie Camera</li>
+                                </ul>*@
+                                <div class="post-tag">
+                                    <h5>Tag: <a href="#"> @Model.Tags</a></h5>
+                                </div>
+                            </div>
+                            <div class="comment-area">
+                                <h4 class="comment-title">COMMENT: <span>2</span></h4>
+                                <ol class="comment-list">
+                                    <li>
+                                        <div class="single-comment">
+                                            <img src="~/assets/images/blog/c1.jpg" alt="">
+                                            <h5><a href="#">Jason Statham</a><span>July 06th, 2017</span></h5>
+                                            <div class="comment">
+                                                <p>
+                                                    Proin vitae dignissim enim, a iaculis sapien. nisi et dignissim efficitur, sapien lorem  et tristique nulla lectus fauc-ibus est Pellentesque dapibus
+                                                </p>
+                                            </div>
+                                            <a class="comment-reply-link" href="#">Reply</a>
+                                        </div>
+                                        <ul class="children">
+                                            <li>
+                                                <div class="single-comment">
+                                                    <img src="~/assets/images/blog/c2.jpg" alt="">
+                                                    <h5><a href="#">Herbie Darbage</a><span>July 06th, 2017</span></h5>
+                                                    <div class="comment">
+                                                        <p>
+                                                            Proin vitae dignissim enim, a iaculis sapien. nisi et dignissim efficitur, sapien lorem  et tristique nulla lectus faucibus est Pellentesque dapibus
+                                                        </p>
+                                                    </div>
+                                                    <a class="comment-reply-link" href="#">Reply</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="single-comment">
+                                            <img src="~/assets/images/blog/c1.jpg" alt="">
+                                            <h5><a href="#">Jason Statham</a><span>July 06th, 2017</span></h5>
+                                            <div class="comment">
+                                                <p>
+                                                    Proin vitae dignissim enim, a iaculis sapien. nisi et dignissim efficitur, sapien lorem  et tristique nulla lectus fauc-ibus est Pellentesque dapibus
+                                                </p>
+                                            </div>
+                                            <a class="comment-reply-link" href="#">Reply</a>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <div class="comment-form-wrapper">
+                                    <h5>LEAVE A COMMENT</h5>
+                                    <form action="#" method="post" class="row comment-form">
+                                        <div class="col-lg-6 col-md-6">
+                                            <input type="text" name="name" placeholder="Name">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <input type="email" name="email" placeholder="Email">
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <textarea name="message" placeholder="Your message"></textarea>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <input type="submit" name="submit" value="post">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<h1>SinglePost</h1>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Contents)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contents)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Thumb)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Thumb)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsHot)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsHot)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsNewfeed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsNewfeed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Views)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Views)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Account)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Account.AccountId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a> |
+    <a asp-action="Index">Quay về</a>
+</div>
+*@
+@{
+    var imgs = @Model.Thumb;
+}
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+            var text = $("#content").text();
+            $("#content").html(text)
+            $("#img1").attr("src","../../images/posts/ai-se-phu-hop-voi-hp-envy-15-x360-thinkpro.jpg")
+            $("#img2").attr("src","../../images/posts/ai-se-phu-hop-voi-hp-envy-15-x360-thinkpro.jpg")
+            $("#img3").attr("src","../../images/posts/ai-se-phu-hop-voi-hp-envy-15-x360-thinkpro.jpg")
+            $("#img4").attr("src","../../images/posts/ai-se-phu-hop-voi-hp-envy-15-x360-thinkpro.jpg")
+            //console.log("đây là " + @ViewBag.imgs) 
+            //var count = 1
+            //while($("#img" + count) != null)
+            //{
+            //    $("#img" + count).src("~/images/posts/" + imgs[count-1])
+
+            //}
+            //var img = document.querySelectorAll("img");
+            //console.log(img)
+        } )
+    </script>
+}

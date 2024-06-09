@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Admin\Data\**" />
+    <Compile Remove="Areas\Admin\Models\**" />
+    <Content Remove="Areas\Admin\Data\**" />
+    <Content Remove="Areas\Admin\Models\**" />
+    <EmbeddedResource Remove="Areas\Admin\Data\**" />
+    <EmbeddedResource Remove="Areas\Admin\Models\**" />
+    <None Remove="Areas\Admin\Data\**" />
+    <None Remove="Areas\Admin\Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Admin\images\logo\favicon.svg" />
+    <Content Remove="wwwroot\Admin\images\logo\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\ajax\mail.php" />
+    <None Include="wwwroot\assets\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\fonts\Flaticon.svg" />
+    <None Include="wwwroot\assets\fonts\Flaticon.woff2" />
+    <None Include="wwwroot\assets\fonts\lightcase.svg" />
+    <None Include="wwwroot\assets\fonts\Pe-icon-7-stroke.svg" />
+    <None Include="wwwroot\assets\fonts\revicons.svg" />
+    <None Include="wwwroot\assets\fonts\themewar.svg" />
+    <None Include="wwwroot\assets\images\favicon.svg" />
+    <None Include="wwwroot\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.actions.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.carousel.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.kenburn.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.layeranimation.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.migration.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.navigation.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.parallax.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.slideanims.min.js" />
+    <None Include="wwwroot\assets\js\extensions\revolution.extension.video.min.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.actions.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.carousel.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.kenburn.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.layeranimation.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.migration.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.navigation.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.parallax.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.slideanims.js" />
+    <None Include="wwwroot\assets\js\extensions\source\revolution.extension.video.js" />
+    <None Include="wwwroot\assets\js\jquery-ui.js" />
+    <None Include="wwwroot\assets\js\jquery.appear.js" />
+    <None Include="wwwroot\assets\js\jquery.countdown.min.js" />
+    <None Include="wwwroot\assets\js\jquery.countdown.min.map" />
+    <None Include="wwwroot\assets\js\jquery.easing.1.3.js" />
+    <None Include="wwwroot\assets\js\jquery.js" />
+    <None Include="wwwroot\assets\js\jquery.plugin.min.js" />
+    <None Include="wwwroot\assets\js\jquery.plugin.min.map" />
+    <None Include="wwwroot\assets\js\jquery.shuffle.min.js" />
+    <None Include="wwwroot\assets\js\jquery.themepunch.revolution.min.js" />
+    <None Include="wwwroot\assets\js\jquery.themepunch.tools.min.js" />
+    <None Include="wwwroot\assets\js\lightcase.js" />
+    <None Include="wwwroot\assets\js\modernizr.custom.js" />
+    <None Include="wwwroot\assets\js\owl.carousel.min.js" />
+    <None Include="wwwroot\assets\js\shuffle.js.map" />
+    <None Include="wwwroot\assets\js\theme.js" />
+    <None Include="wwwroot\assets\js\tweenmax.min.js" />
+    <None Include="wwwroot\assets\uicons-thin-straight\webfonts\uicons-regular-rounded.woff2" />
+    <None Include="wwwroot\assets\uicons-thin-straight\webfonts\uicons-thin-straight.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="PagedList.Core.Mvc" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\Admin\images\logo\favicon.svg" />
+    <Resource Include="wwwroot\Admin\images\logo\logo.png" />
+  </ItemGroup>
+
+</Project>

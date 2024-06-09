@@ -1,0 +1,24 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<IS220_PROJECT.Models.Product>
+@{
+    ViewData["Title"] = "Laptop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    PagedList.Core.IPagedList<IS220_PROJECT.Models.Product> laptops = Model;
+}
+
+<!-- Banner Start -->
+<section class="page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="round-shape"></span>
+                <h2 class="banner-title">THIẾT BỊ KHÁC</h2>
+                <div class="bread-crumb"><a asp-action="Index">TRANG CHỦ</a> / THIẾT BỊ KHÁC</div>
+            </div>
+        </div>
+    </div>
+</section>    
+<!-- Banner End -->
+
+@await Html.PartialAsync("../Shared/_ShopPartialView.cshtml")
+

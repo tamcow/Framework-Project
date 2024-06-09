@@ -1,0 +1,69 @@
+﻿@model IEnumerable<IS220_PROJECT.Models.Supplier>
+
+@{
+    ViewData["Title"] = "Nhà cung cấp";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Nhà cung cấp</h1>
+<div class="card">
+	<div class="card-body">
+		<div class="text-right">
+			<a class="btn btn-primary" asp-action="Create">
+				<i class="anticon anticon-plus-circle m-r-5"></i>
+				<span>Thêm nhà cung cấp</span>
+			</a>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-hover e-commerce-table">
+				<thead>
+					<tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Phone)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ContractDate)
+                        </th>
+                        <th></th>
+                    </tr>
+				</thead>
+				<tbody>
+					@if (Model != null)
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Phone)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Address)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ContractDate)
+                                </td>
+								<td>
+									<a class="btn btn-secondary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.SupplierId">Details</a> |
+									<a class="btn btn-primary btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.SupplierId">Edit</a> |
+									<a class="btn btn-danger btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.SupplierId">Delete</a>
+								</td>
+							</tr>
+						}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

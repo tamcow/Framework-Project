@@ -1,0 +1,5433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uicons</title>
+
+    <style>
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #4A6375;
+            line-height: 22px;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        .logo {
+            margin-bottom: 50px;
+            display: inline-block;
+        }
+
+        .logo svg {
+            display: block
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #0E2A47;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .mono {
+            font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+        }
+
+        code {
+            background-color: #1D262D;
+            padding: 15px 20px;
+            border-radius: 3px;
+            color: #fff;
+            display: block;
+            font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+            font-weight: normal;
+            width: 100%;
+            max-width: 700px;
+            margin-left: -20px;
+        }
+
+        pre {
+            white-space: break-spaces;
+        }
+
+        small {
+            font-size: 14px;
+            margin-left: -20px;
+        }
+
+        ol {
+            list-style: decimal;
+            padding-left: 20px;
+        }
+
+        .steps {
+            text-align: left;
+            margin-bottom: 40px;;
+        }
+
+        .steps ol li {
+            margin-bottom: 20px;
+        }
+
+        .icons {
+            color: #374957;
+        }
+
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 0 -20px;
+        }
+
+        .icons li {
+            padding: 0 20px;
+            width: 50%;
+        }
+
+        .icon-holder {
+            height: 62px;
+            line-height: 62px;
+            border-bottom: 1px solid #CFD9E0;
+        }
+
+        .icon-holder i {
+            font-size: 32px;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .icons li {
+                padding: 0 20px;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/uicons-thin-straight.css" />
+</head>
+<body>
+
+<div class="container">
+    <a href="http://www.flaticon.com/uicons" class="logo">
+        <svg width="123" height="17" viewBox="0 0 123 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+                <path d="M29.4438 9.70091C29.4438 14.8009 25.845 17.004 21.812 17.004C17.7791 17.004 14.1641 14.805 14.1641 9.70091V0.434082H18.5135V9.33169C18.5135 11.9162 19.9295 12.9832 21.812 12.9832C23.6946 12.9832 25.1106 11.9324 25.1106 9.33169V0.434082H29.4438V9.70091Z" fill="#222C47"/>
+                <path d="M37.1853 16.5821H32.8359V0.434082H37.1853V16.5821Z" fill="#222C47"/>
+                <path d="M55.3498 3.051L52.2176 5.68012C51.7982 5.17177 51.2715 4.7626 50.6752 4.482C50.0789 4.2014 49.4279 4.05633 48.7689 4.05721C46.5171 4.05721 44.7116 5.82618 44.7116 8.52021C44.7116 11.2142 46.4968 12.9832 48.7689 12.9832C49.4361 12.977 50.0944 12.8291 50.7001 12.5493C51.3058 12.2695 51.8452 11.8642 52.2825 11.3603L55.3823 14.0097C54.6134 14.9885 53.6254 15.7731 52.4979 16.3002C51.3703 16.8274 50.1348 17.0823 48.8906 17.0446C43.7338 16.9999 40.2852 13.3889 40.2852 8.52021C40.2852 3.65148 43.7338 -7.03519e-05 48.8825 -7.03519e-05C50.1248 -0.0375892 51.3582 0.219274 52.4822 0.74954C53.6062 1.2798 54.5888 2.06843 55.3498 3.051Z" fill="#222C47"/>
+                <path d="M73.9959 8.52029C73.9959 13.389 70.2794 17.0406 65.2484 17.0406C60.2174 17.0406 56.5293 13.389 56.5293 8.52029C56.5293 3.65155 60.2295 0 65.2484 0C70.2672 0 73.9959 3.65155 73.9959 8.52029ZM60.9639 8.52029C60.9639 11.1372 62.7978 12.9833 65.2484 12.9833C67.699 12.9833 69.545 11.1494 69.545 8.52029C69.545 5.89117 67.699 4.05728 65.2484 4.05728C62.7978 4.05728 60.9639 5.88305 60.9639 8.52029Z" fill="#222C47"/>
+                <path d="M91.7714 6.30095V16.5821H87.422V7.70883C87.422 5.3759 86.2535 4.08974 84.2736 4.08974C82.4072 4.08974 80.8574 5.30692 80.8574 7.74129V16.5821H76.5039V0.434129H80.7397V2.33294C81.8879 0.616706 83.6569 0 85.4908 0C89.1545 0 91.7714 2.54797 91.7714 6.30095Z" fill="#222C47"/>
+                <path d="M106.657 4.93353C105.049 4.1464 103.297 3.6976 101.508 3.61492C99.8569 3.61492 99.0252 4.19917 99.0252 5.08365C99.0252 5.96814 100.19 6.24809 101.658 6.46718L103.091 6.68222C106.588 7.21778 108.54 8.78389 108.54 11.5185C108.54 14.8495 105.805 16.9999 101.123 16.9999C98.9238 16.9999 96.039 16.5942 93.9414 15.1011L95.6576 11.7984C97.2818 12.8839 99.2024 13.4395 101.155 13.3889C103.184 13.3889 104.141 12.8209 104.141 11.8715C104.141 11.0884 103.33 10.6543 101.456 10.3865L100.141 10.2039C96.4082 9.68866 94.5581 8.05358 94.5581 5.30275C94.5581 1.98795 97.1223 0.0282822 101.374 0.0282822C103.714 -0.0143955 106.03 0.511905 108.122 1.56193L106.657 4.93353Z" fill="#222C47"/>
+                <path d="M3.70114 8.5204L9.24338 2.95787L6.65889 0.377441L1.03145 6.00489C0.37092 6.66732 0 7.56464 0 8.50011C0 9.43559 0.37092 10.3329 1.03145 10.9953L6.60615 16.57L9.19064 13.9896L3.70114 8.5204Z" fill="#4AD295"/>
+                <path d="M118.622 8.44737L113.08 13.9896L115.665 16.57L121.288 10.9548C121.616 10.6269 121.876 10.2377 122.054 9.80916C122.232 9.38066 122.323 8.92136 122.323 8.45751C122.323 7.99366 122.232 7.53436 122.054 7.10586C121.876 6.67737 121.616 6.28808 121.288 5.96026L115.713 0.377441L113.133 2.95787L118.622 8.44737Z" fill="#4AD295"/>
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="122.323" height="17" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+    </a>
+
+    <h1>Get started</h1>
+
+    <div class="steps">
+        <ol>
+            <li>Copy the entire /webfonts folder and the css into your project’s static assets directory.</li>
+            <li>Add the following line into the <span class="mono">&lt;head&gt;</span> of each template or page that you want to use Uicons on.<br><br>
+                <code><pre>&lt;link href="/your-path-to-uicons/css/uicons-thin-straight.css" rel="stylesheet"&gt;</pre></code>
+            </li>
+            <li>Use the icons with the tags <span class="mono">&lt;i&gt;</span> or <span class="mono">&lt;span&gt;</span>.<br><br>
+                <code><pre>&lt;i class="fi fi-ts-camera"&gt;
+&lt;span class="fi fi-ts-camera"&gt;</pre></code>
+                <small>Example:</small>
+            </li>
+        </ol>
+    </div>
+
+    <ul class="icons">
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-a"></i>
+                    <span class="label mono">fi-ts-a</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ad"></i>
+                    <span class="label mono">fi-ts-ad</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-air-conditioner"></i>
+                    <span class="label mono">fi-ts-air-conditioner</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-air-freshener"></i>
+                    <span class="label mono">fi-ts-air-freshener</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-alarm-exclamation"></i>
+                    <span class="label mono">fi-ts-alarm-exclamation</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-alarm-plus"></i>
+                    <span class="label mono">fi-ts-alarm-plus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-alarm-snooze"></i>
+                    <span class="label mono">fi-ts-alarm-snooze</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-circle-down"></i>
+                    <span class="label mono">fi-ts-angle-circle-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-circle-left"></i>
+                    <span class="label mono">fi-ts-angle-circle-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-circle-right"></i>
+                    <span class="label mono">fi-ts-angle-circle-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-circle-up"></i>
+                    <span class="label mono">fi-ts-angle-circle-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-double-small-down"></i>
+                    <span class="label mono">fi-ts-angle-double-small-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-double-small-up"></i>
+                    <span class="label mono">fi-ts-angle-double-small-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-square-down"></i>
+                    <span class="label mono">fi-ts-angle-square-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-square-left"></i>
+                    <span class="label mono">fi-ts-angle-square-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-square-right"></i>
+                    <span class="label mono">fi-ts-angle-square-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angle-square-up"></i>
+                    <span class="label mono">fi-ts-angle-square-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-angry"></i>
+                    <span class="label mono">fi-ts-angry</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-circle-down"></i>
+                    <span class="label mono">fi-ts-arrow-alt-circle-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-circle-left"></i>
+                    <span class="label mono">fi-ts-arrow-alt-circle-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-circle-right"></i>
+                    <span class="label mono">fi-ts-arrow-alt-circle-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-circle-up"></i>
+                    <span class="label mono">fi-ts-arrow-alt-circle-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-down"></i>
+                    <span class="label mono">fi-ts-arrow-alt-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-from-bottom"></i>
+                    <span class="label mono">fi-ts-arrow-alt-from-bottom</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-from-left"></i>
+                    <span class="label mono">fi-ts-arrow-alt-from-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-from-right"></i>
+                    <span class="label mono">fi-ts-arrow-alt-from-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-from-top"></i>
+                    <span class="label mono">fi-ts-arrow-alt-from-top</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-left"></i>
+                    <span class="label mono">fi-ts-arrow-alt-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-right"></i>
+                    <span class="label mono">fi-ts-arrow-alt-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-square-down"></i>
+                    <span class="label mono">fi-ts-arrow-alt-square-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-square-left"></i>
+                    <span class="label mono">fi-ts-arrow-alt-square-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-square-right"></i>
+                    <span class="label mono">fi-ts-arrow-alt-square-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-square-up"></i>
+                    <span class="label mono">fi-ts-arrow-alt-square-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-to-bottom"></i>
+                    <span class="label mono">fi-ts-arrow-alt-to-bottom</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-to-left"></i>
+                    <span class="label mono">fi-ts-arrow-alt-to-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-to-right"></i>
+                    <span class="label mono">fi-ts-arrow-alt-to-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-to-top"></i>
+                    <span class="label mono">fi-ts-arrow-alt-to-top</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-alt-up"></i>
+                    <span class="label mono">fi-ts-arrow-alt-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-circle-down"></i>
+                    <span class="label mono">fi-ts-arrow-circle-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-circle-left"></i>
+                    <span class="label mono">fi-ts-arrow-circle-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-circle-right"></i>
+                    <span class="label mono">fi-ts-arrow-circle-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-circle-up"></i>
+                    <span class="label mono">fi-ts-arrow-circle-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-from-left"></i>
+                    <span class="label mono">fi-ts-arrow-from-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-from-right"></i>
+                    <span class="label mono">fi-ts-arrow-from-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-from-top"></i>
+                    <span class="label mono">fi-ts-arrow-from-top</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-square-down"></i>
+                    <span class="label mono">fi-ts-arrow-square-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-square-left"></i>
+                    <span class="label mono">fi-ts-arrow-square-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-square-right"></i>
+                    <span class="label mono">fi-ts-arrow-square-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-square-up"></i>
+                    <span class="label mono">fi-ts-arrow-square-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-to-bottom"></i>
+                    <span class="label mono">fi-ts-arrow-to-bottom</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-to-left"></i>
+                    <span class="label mono">fi-ts-arrow-to-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-to-right"></i>
+                    <span class="label mono">fi-ts-arrow-to-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-to-top"></i>
+                    <span class="label mono">fi-ts-arrow-to-top</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-trend-down"></i>
+                    <span class="label mono">fi-ts-arrow-trend-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-trend-up"></i>
+                    <span class="label mono">fi-ts-arrow-trend-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-from-square"></i>
+                    <span class="label mono">fi-ts-arrow-up-from-square</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-left-from-circle"></i>
+                    <span class="label mono">fi-ts-arrow-up-left-from-circle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-left"></i>
+                    <span class="label mono">fi-ts-arrow-up-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-right-and-arrow-down-left-from-center"></i>
+                    <span class="label mono">fi-ts-arrow-up-right-and-arrow-down-left-from-center</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-right-from-square"></i>
+                    <span class="label mono">fi-ts-arrow-up-right-from-square</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-right"></i>
+                    <span class="label mono">fi-ts-arrow-up-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-square-triangle"></i>
+                    <span class="label mono">fi-ts-arrow-up-square-triangle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrow-up-to-dotted-line"></i>
+                    <span class="label mono">fi-ts-arrow-up-to-dotted-line</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-alt-h"></i>
+                    <span class="label mono">fi-ts-arrows-alt-h</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-alt-v"></i>
+                    <span class="label mono">fi-ts-arrows-alt-v</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-alt"></i>
+                    <span class="label mono">fi-ts-arrows-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-cross"></i>
+                    <span class="label mono">fi-ts-arrows-cross</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-from-dotted-line"></i>
+                    <span class="label mono">fi-ts-arrows-from-dotted-line</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-from-line"></i>
+                    <span class="label mono">fi-ts-arrows-from-line</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-h-copy"></i>
+                    <span class="label mono">fi-ts-arrows-h-copy</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-h"></i>
+                    <span class="label mono">fi-ts-arrows-h</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-repeat-1"></i>
+                    <span class="label mono">fi-ts-arrows-repeat-1</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-repeat"></i>
+                    <span class="label mono">fi-ts-arrows-repeat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-to-dotted-line"></i>
+                    <span class="label mono">fi-ts-arrows-to-dotted-line</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows-to-line"></i>
+                    <span class="label mono">fi-ts-arrows-to-line</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-arrows"></i>
+                    <span class="label mono">fi-ts-arrows</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-assistive-listening-systems"></i>
+                    <span class="label mono">fi-ts-assistive-listening-systems</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-aubergine"></i>
+                    <span class="label mono">fi-ts-aubergine</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-avocado"></i>
+                    <span class="label mono">fi-ts-avocado</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-b"></i>
+                    <span class="label mono">fi-ts-b</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-baby-carriage"></i>
+                    <span class="label mono">fi-ts-baby-carriage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bacon"></i>
+                    <span class="label mono">fi-ts-bacon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-badge-check"></i>
+                    <span class="label mono">fi-ts-badge-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-badge-dollar"></i>
+                    <span class="label mono">fi-ts-badge-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-badge-percent"></i>
+                    <span class="label mono">fi-ts-badge-percent</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-badge-sheriff"></i>
+                    <span class="label mono">fi-ts-badge-sheriff</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bags-shopping"></i>
+                    <span class="label mono">fi-ts-bags-shopping</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bahai"></i>
+                    <span class="label mono">fi-ts-bahai</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-balance-scale-left"></i>
+                    <span class="label mono">fi-ts-balance-scale-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-balance-scale-right"></i>
+                    <span class="label mono">fi-ts-balance-scale-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-balance-scale"></i>
+                    <span class="label mono">fi-ts-balance-scale</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ballot"></i>
+                    <span class="label mono">fi-ts-ballot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-barcode-read"></i>
+                    <span class="label mono">fi-ts-barcode-read</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-barcode-scan"></i>
+                    <span class="label mono">fi-ts-barcode-scan</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-barcode"></i>
+                    <span class="label mono">fi-ts-barcode</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bars-progress"></i>
+                    <span class="label mono">fi-ts-bars-progress</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-baseball-alt"></i>
+                    <span class="label mono">fi-ts-baseball-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-basketball-hoop"></i>
+                    <span class="label mono">fi-ts-basketball-hoop</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bed-alt"></i>
+                    <span class="label mono">fi-ts-bed-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-biking-mountain"></i>
+                    <span class="label mono">fi-ts-biking-mountain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-biking"></i>
+                    <span class="label mono">fi-ts-biking</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-blinds-open"></i>
+                    <span class="label mono">fi-ts-blinds-open</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-blinds-raised"></i>
+                    <span class="label mono">fi-ts-blinds-raised</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-blinds"></i>
+                    <span class="label mono">fi-ts-blinds</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bolt"></i>
+                    <span class="label mono">fi-ts-bolt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-book-arrow-right"></i>
+                    <span class="label mono">fi-ts-book-arrow-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-book-arrow-up"></i>
+                    <span class="label mono">fi-ts-book-arrow-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-book-bookmark"></i>
+                    <span class="label mono">fi-ts-book-bookmark</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-book-open-cover"></i>
+                    <span class="label mono">fi-ts-book-open-cover</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-book-open-reader"></i>
+                    <span class="label mono">fi-ts-book-open-reader</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-books"></i>
+                    <span class="label mono">fi-ts-books</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bottle"></i>
+                    <span class="label mono">fi-ts-bottle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bow-arrow"></i>
+                    <span class="label mono">fi-ts-bow-arrow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bowling-ball"></i>
+                    <span class="label mono">fi-ts-bowling-ball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bowling-pins"></i>
+                    <span class="label mono">fi-ts-bowling-pins</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-box-ballot"></i>
+                    <span class="label mono">fi-ts-box-ballot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-box-check"></i>
+                    <span class="label mono">fi-ts-box-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-box-tissue"></i>
+                    <span class="label mono">fi-ts-box-tissue</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-boxes"></i>
+                    <span class="label mono">fi-ts-boxes</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-boxing-glove"></i>
+                    <span class="label mono">fi-ts-boxing-glove</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-braille"></i>
+                    <span class="label mono">fi-ts-braille</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-brain-circuit"></i>
+                    <span class="label mono">fi-ts-brain-circuit</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bread"></i>
+                    <span class="label mono">fi-ts-bread</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-broccoli"></i>
+                    <span class="label mono">fi-ts-broccoli</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bullseye-pointer"></i>
+                    <span class="label mono">fi-ts-bullseye-pointer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bullseye"></i>
+                    <span class="label mono">fi-ts-bullseye</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-burrito"></i>
+                    <span class="label mono">fi-ts-burrito</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bus-alt"></i>
+                    <span class="label mono">fi-ts-bus-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-bus"></i>
+                    <span class="label mono">fi-ts-bus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-business-time"></i>
+                    <span class="label mono">fi-ts-business-time</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-c"></i>
+                    <span class="label mono">fi-ts-c</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-check"></i>
+                    <span class="label mono">fi-ts-calendar-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-clock"></i>
+                    <span class="label mono">fi-ts-calendar-clock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-exclamation"></i>
+                    <span class="label mono">fi-ts-calendar-exclamation</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-lines-pen"></i>
+                    <span class="label mono">fi-ts-calendar-lines-pen</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-lines"></i>
+                    <span class="label mono">fi-ts-calendar-lines</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-minus"></i>
+                    <span class="label mono">fi-ts-calendar-minus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-pen"></i>
+                    <span class="label mono">fi-ts-calendar-pen</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendar-plus"></i>
+                    <span class="label mono">fi-ts-calendar-plus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-calendars"></i>
+                    <span class="label mono">fi-ts-calendars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-camcorder"></i>
+                    <span class="label mono">fi-ts-camcorder</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-candy-cane"></i>
+                    <span class="label mono">fi-ts-candy-cane</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-candy"></i>
+                    <span class="label mono">fi-ts-candy</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-canned-food"></i>
+                    <span class="label mono">fi-ts-canned-food</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-alt"></i>
+                    <span class="label mono">fi-ts-car-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-battery"></i>
+                    <span class="label mono">fi-ts-car-battery</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-bolt"></i>
+                    <span class="label mono">fi-ts-car-bolt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-building"></i>
+                    <span class="label mono">fi-ts-car-building</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-bump"></i>
+                    <span class="label mono">fi-ts-car-bump</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-bus"></i>
+                    <span class="label mono">fi-ts-car-bus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-circle-bolt"></i>
+                    <span class="label mono">fi-ts-car-circle-bolt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-crash"></i>
+                    <span class="label mono">fi-ts-car-crash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-garage"></i>
+                    <span class="label mono">fi-ts-car-garage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-mechanic"></i>
+                    <span class="label mono">fi-ts-car-mechanic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-side-bolt"></i>
+                    <span class="label mono">fi-ts-car-side-bolt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-side"></i>
+                    <span class="label mono">fi-ts-car-side</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-tilt"></i>
+                    <span class="label mono">fi-ts-car-tilt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-car-wash"></i>
+                    <span class="label mono">fi-ts-car-wash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caravan-alt"></i>
+                    <span class="label mono">fi-ts-caravan-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caravan"></i>
+                    <span class="label mono">fi-ts-caravan</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-circle-down"></i>
+                    <span class="label mono">fi-ts-caret-circle-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-circle-right"></i>
+                    <span class="label mono">fi-ts-caret-circle-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-circle-up"></i>
+                    <span class="label mono">fi-ts-caret-circle-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-square-down"></i>
+                    <span class="label mono">fi-ts-caret-square-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-square-left_1"></i>
+                    <span class="label mono">fi-ts-caret-square-left_1</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-square-left"></i>
+                    <span class="label mono">fi-ts-caret-square-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-square-right"></i>
+                    <span class="label mono">fi-ts-caret-square-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-caret-square-up"></i>
+                    <span class="label mono">fi-ts-caret-square-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cars"></i>
+                    <span class="label mono">fi-ts-cars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cash-register"></i>
+                    <span class="label mono">fi-ts-cash-register</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chair-office"></i>
+                    <span class="label mono">fi-ts-chair-office</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chair"></i>
+                    <span class="label mono">fi-ts-chair</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-charging-station"></i>
+                    <span class="label mono">fi-ts-charging-station</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chart-area"></i>
+                    <span class="label mono">fi-ts-chart-area</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chart-line-up"></i>
+                    <span class="label mono">fi-ts-chart-line-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chart-scatter"></i>
+                    <span class="label mono">fi-ts-chart-scatter</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cherry"></i>
+                    <span class="label mono">fi-ts-cherry</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-bishop"></i>
+                    <span class="label mono">fi-ts-chess-bishop</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-board"></i>
+                    <span class="label mono">fi-ts-chess-board</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-clock-alt"></i>
+                    <span class="label mono">fi-ts-chess-clock-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-clock"></i>
+                    <span class="label mono">fi-ts-chess-clock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-king-alt"></i>
+                    <span class="label mono">fi-ts-chess-king-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-king"></i>
+                    <span class="label mono">fi-ts-chess-king</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-knight-alt"></i>
+                    <span class="label mono">fi-ts-chess-knight-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-knight"></i>
+                    <span class="label mono">fi-ts-chess-knight</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-pawn-alt"></i>
+                    <span class="label mono">fi-ts-chess-pawn-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-pawn"></i>
+                    <span class="label mono">fi-ts-chess-pawn</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-queen-alt"></i>
+                    <span class="label mono">fi-ts-chess-queen-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-queen"></i>
+                    <span class="label mono">fi-ts-chess-queen</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-rook-alt"></i>
+                    <span class="label mono">fi-ts-chess-rook-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess-rook"></i>
+                    <span class="label mono">fi-ts-chess-rook</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chess"></i>
+                    <span class="label mono">fi-ts-chess</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chevron-double-down"></i>
+                    <span class="label mono">fi-ts-chevron-double-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chevron-double-up"></i>
+                    <span class="label mono">fi-ts-chevron-double-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-chocolate-bar"></i>
+                    <span class="label mono">fi-ts-chocolate-bar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-circle-envelope"></i>
+                    <span class="label mono">fi-ts-circle-envelope</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-circle-phone-flip"></i>
+                    <span class="label mono">fi-ts-circle-phone-flip</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-circle-phone-hangup"></i>
+                    <span class="label mono">fi-ts-circle-phone-hangup</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-circle-phone"></i>
+                    <span class="label mono">fi-ts-circle-phone</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clipboard-list-check"></i>
+                    <span class="label mono">fi-ts-clipboard-list-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clipboard-list"></i>
+                    <span class="label mono">fi-ts-clipboard-list</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-eight-thirty"></i>
+                    <span class="label mono">fi-ts-clock-eight-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-eleven-thirty"></i>
+                    <span class="label mono">fi-ts-clock-eleven-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-eleven"></i>
+                    <span class="label mono">fi-ts-clock-eleven</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-five-thirty"></i>
+                    <span class="label mono">fi-ts-clock-five-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-five"></i>
+                    <span class="label mono">fi-ts-clock-five</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-four-thirty"></i>
+                    <span class="label mono">fi-ts-clock-four-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-nine-thirty"></i>
+                    <span class="label mono">fi-ts-clock-nine-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-nine"></i>
+                    <span class="label mono">fi-ts-clock-nine</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-one-thirty"></i>
+                    <span class="label mono">fi-ts-clock-one-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-one"></i>
+                    <span class="label mono">fi-ts-clock-one</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-seven-thirty"></i>
+                    <span class="label mono">fi-ts-clock-seven-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-seven"></i>
+                    <span class="label mono">fi-ts-clock-seven</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-six-thirty"></i>
+                    <span class="label mono">fi-ts-clock-six-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-six"></i>
+                    <span class="label mono">fi-ts-clock-six</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-ten-thirty"></i>
+                    <span class="label mono">fi-ts-clock-ten-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-ten"></i>
+                    <span class="label mono">fi-ts-clock-ten</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-three-thirty"></i>
+                    <span class="label mono">fi-ts-clock-three-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-three"></i>
+                    <span class="label mono">fi-ts-clock-three</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-twelve-thirty"></i>
+                    <span class="label mono">fi-ts-clock-twelve-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-twelve"></i>
+                    <span class="label mono">fi-ts-clock-twelve</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-two-thirty"></i>
+                    <span class="label mono">fi-ts-clock-two-thirty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clock-two"></i>
+                    <span class="label mono">fi-ts-clock-two</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-download-alt"></i>
+                    <span class="label mono">fi-ts-cloud-download-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-drizzle"></i>
+                    <span class="label mono">fi-ts-cloud-drizzle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-hail-mixed"></i>
+                    <span class="label mono">fi-ts-cloud-hail-mixed</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-hail"></i>
+                    <span class="label mono">fi-ts-cloud-hail</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-moon-rain"></i>
+                    <span class="label mono">fi-ts-cloud-moon-rain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-moon"></i>
+                    <span class="label mono">fi-ts-cloud-moon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-rain"></i>
+                    <span class="label mono">fi-ts-cloud-rain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-rainbow"></i>
+                    <span class="label mono">fi-ts-cloud-rainbow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-showers-heavy"></i>
+                    <span class="label mono">fi-ts-cloud-showers-heavy</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-showers"></i>
+                    <span class="label mono">fi-ts-cloud-showers</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-sleet"></i>
+                    <span class="label mono">fi-ts-cloud-sleet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-snow"></i>
+                    <span class="label mono">fi-ts-cloud-snow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-sun-rain"></i>
+                    <span class="label mono">fi-ts-cloud-sun-rain</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-sun"></i>
+                    <span class="label mono">fi-ts-cloud-sun</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cloud-upload-alt"></i>
+                    <span class="label mono">fi-ts-cloud-upload-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clouds-moon"></i>
+                    <span class="label mono">fi-ts-clouds-moon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-clouds-sun"></i>
+                    <span class="label mono">fi-ts-clouds-sun</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-club"></i>
+                    <span class="label mono">fi-ts-club</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-branch"></i>
+                    <span class="label mono">fi-ts-code-branch</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-commit"></i>
+                    <span class="label mono">fi-ts-code-commit</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-compare"></i>
+                    <span class="label mono">fi-ts-code-compare</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-fork"></i>
+                    <span class="label mono">fi-ts-code-fork</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-merge"></i>
+                    <span class="label mono">fi-ts-code-merge</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-pull-request-closed"></i>
+                    <span class="label mono">fi-ts-code-pull-request-closed</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-pull-request-draft"></i>
+                    <span class="label mono">fi-ts-code-pull-request-draft</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-pull-request"></i>
+                    <span class="label mono">fi-ts-code-pull-request</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-code-simple"></i>
+                    <span class="label mono">fi-ts-code-simple</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-coffee-pot"></i>
+                    <span class="label mono">fi-ts-coffee-pot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-coin"></i>
+                    <span class="label mono">fi-ts-coin</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-coins"></i>
+                    <span class="label mono">fi-ts-coins</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comet"></i>
+                    <span class="label mono">fi-ts-comet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-alt-middle-top"></i>
+                    <span class="label mono">fi-ts-comment-alt-middle-top</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-alt-middle"></i>
+                    <span class="label mono">fi-ts-comment-alt-middle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-arrow-down"></i>
+                    <span class="label mono">fi-ts-comment-arrow-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-arrow-up-right"></i>
+                    <span class="label mono">fi-ts-comment-arrow-up-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-arrow-up"></i>
+                    <span class="label mono">fi-ts-comment-arrow-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-code"></i>
+                    <span class="label mono">fi-ts-comment-code</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-dollar"></i>
+                    <span class="label mono">fi-ts-comment-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-exclamation"></i>
+                    <span class="label mono">fi-ts-comment-exclamation</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-image"></i>
+                    <span class="label mono">fi-ts-comment-image</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-pen"></i>
+                    <span class="label mono">fi-ts-comment-pen</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-question"></i>
+                    <span class="label mono">fi-ts-comment-question</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-quote"></i>
+                    <span class="label mono">fi-ts-comment-quote</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-slash"></i>
+                    <span class="label mono">fi-ts-comment-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-sms"></i>
+                    <span class="label mono">fi-ts-comment-sms</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-text"></i>
+                    <span class="label mono">fi-ts-comment-text</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comment-xmark"></i>
+                    <span class="label mono">fi-ts-comment-xmark</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comments-dollar"></i>
+                    <span class="label mono">fi-ts-comments-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comments-question-check"></i>
+                    <span class="label mono">fi-ts-comments-question-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-comments-question"></i>
+                    <span class="label mono">fi-ts-comments-question</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-compress-alt"></i>
+                    <span class="label mono">fi-ts-compress-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-corn"></i>
+                    <span class="label mono">fi-ts-corn</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-cricket"></i>
+                    <span class="label mono">fi-ts-cricket</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-crystal-ball"></i>
+                    <span class="label mono">fi-ts-crystal-ball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-curling"></i>
+                    <span class="label mono">fi-ts-curling</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-d"></i>
+                    <span class="label mono">fi-ts-d</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-democrat"></i>
+                    <span class="label mono">fi-ts-democrat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dewpoint"></i>
+                    <span class="label mono">fi-ts-dewpoint</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-diagram-project"></i>
+                    <span class="label mono">fi-ts-diagram-project</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-alt"></i>
+                    <span class="label mono">fi-ts-dice-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-d10"></i>
+                    <span class="label mono">fi-ts-dice-d10</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-d12"></i>
+                    <span class="label mono">fi-ts-dice-d12</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-d20"></i>
+                    <span class="label mono">fi-ts-dice-d20</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-d4"></i>
+                    <span class="label mono">fi-ts-dice-d4</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-d6"></i>
+                    <span class="label mono">fi-ts-dice-d6</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-d8"></i>
+                    <span class="label mono">fi-ts-dice-d8</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-four"></i>
+                    <span class="label mono">fi-ts-dice-four</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-one"></i>
+                    <span class="label mono">fi-ts-dice-one</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-six"></i>
+                    <span class="label mono">fi-ts-dice-six</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-three"></i>
+                    <span class="label mono">fi-ts-dice-three</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dice-two"></i>
+                    <span class="label mono">fi-ts-dice-two</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-display-code"></i>
+                    <span class="label mono">fi-ts-display-code</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dizzy"></i>
+                    <span class="label mono">fi-ts-dizzy</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-donate"></i>
+                    <span class="label mono">fi-ts-donate</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-drafting-compass"></i>
+                    <span class="label mono">fi-ts-drafting-compass</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-dreidel"></i>
+                    <span class="label mono">fi-ts-dreidel</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-drink"></i>
+                    <span class="label mono">fi-ts-drink</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-e"></i>
+                    <span class="label mono">fi-ts-e</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-eclipse-alt"></i>
+                    <span class="label mono">fi-ts-eclipse-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-eclipse"></i>
+                    <span class="label mono">fi-ts-eclipse</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-egg-fried"></i>
+                    <span class="label mono">fi-ts-egg-fried</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-egg"></i>
+                    <span class="label mono">fi-ts-egg</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-engine-warning"></i>
+                    <span class="label mono">fi-ts-engine-warning</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-envelope-bulk"></i>
+                    <span class="label mono">fi-ts-envelope-bulk</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-envelope-open-dollar"></i>
+                    <span class="label mono">fi-ts-envelope-open-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-envelope-open-text"></i>
+                    <span class="label mono">fi-ts-envelope-open-text</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-equality"></i>
+                    <span class="label mono">fi-ts-equality</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-exchange-alt"></i>
+                    <span class="label mono">fi-ts-exchange-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-exchange"></i>
+                    <span class="label mono">fi-ts-exchange</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-expand-arrows-alt"></i>
+                    <span class="label mono">fi-ts-expand-arrows-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-expand-arrows"></i>
+                    <span class="label mono">fi-ts-expand-arrows</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-f"></i>
+                    <span class="label mono">fi-ts-f</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-field-hockey"></i>
+                    <span class="label mono">fi-ts-field-hockey</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-fighter-jet"></i>
+                    <span class="label mono">fi-ts-fighter-jet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-file-chart-line"></i>
+                    <span class="label mono">fi-ts-file-chart-line</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-file-chart-pie"></i>
+                    <span class="label mono">fi-ts-file-chart-pie</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-file-code"></i>
+                    <span class="label mono">fi-ts-file-code</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-file-invoice-dollar"></i>
+                    <span class="label mono">fi-ts-file-invoice-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-file-invoice"></i>
+                    <span class="label mono">fi-ts-file-invoice</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-file-spreadsheet"></i>
+                    <span class="label mono">fi-ts-file-spreadsheet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-file-video"></i>
+                    <span class="label mono">fi-ts-file-video</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-film-slash"></i>
+                    <span class="label mono">fi-ts-film-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-filter-slash"></i>
+                    <span class="label mono">fi-ts-filter-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-filters"></i>
+                    <span class="label mono">fi-ts-filters</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-flag-alt"></i>
+                    <span class="label mono">fi-ts-flag-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-flag-usa"></i>
+                    <span class="label mono">fi-ts-flag-usa</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-flushed"></i>
+                    <span class="label mono">fi-ts-flushed</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-fog"></i>
+                    <span class="label mono">fi-ts-fog</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-folder-download"></i>
+                    <span class="label mono">fi-ts-folder-download</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-folder-minus"></i>
+                    <span class="label mono">fi-ts-folder-minus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-folder-times"></i>
+                    <span class="label mono">fi-ts-folder-times</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-folder-tree"></i>
+                    <span class="label mono">fi-ts-folder-tree</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-folder-upload"></i>
+                    <span class="label mono">fi-ts-folder-upload</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-folders"></i>
+                    <span class="label mono">fi-ts-folders</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-fork"></i>
+                    <span class="label mono">fi-ts-fork</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-french-fries"></i>
+                    <span class="label mono">fi-ts-french-fries</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-funnel-dollar"></i>
+                    <span class="label mono">fi-ts-funnel-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-g"></i>
+                    <span class="label mono">fi-ts-g</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-game-board-alt"></i>
+                    <span class="label mono">fi-ts-game-board-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-garage-car"></i>
+                    <span class="label mono">fi-ts-garage-car</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-garage-open"></i>
+                    <span class="label mono">fi-ts-garage-open</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-garage"></i>
+                    <span class="label mono">fi-ts-garage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-garlic"></i>
+                    <span class="label mono">fi-ts-garlic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-gas-pump-slash"></i>
+                    <span class="label mono">fi-ts-gas-pump-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-gas-pump"></i>
+                    <span class="label mono">fi-ts-gas-pump</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-gift-card"></i>
+                    <span class="label mono">fi-ts-gift-card</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-gifts"></i>
+                    <span class="label mono">fi-ts-gifts</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-gingerbread-man"></i>
+                    <span class="label mono">fi-ts-gingerbread-man</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-glass"></i>
+                    <span class="label mono">fi-ts-glass</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-golf-ball"></i>
+                    <span class="label mono">fi-ts-golf-ball</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-golf-club"></i>
+                    <span class="label mono">fi-ts-golf-club</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grape"></i>
+                    <span class="label mono">fi-ts-grape</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grill"></i>
+                    <span class="label mono">fi-ts-grill</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grimace"></i>
+                    <span class="label mono">fi-ts-grimace</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-alt"></i>
+                    <span class="label mono">fi-ts-grin-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-beam-sweat"></i>
+                    <span class="label mono">fi-ts-grin-beam-sweat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-beam"></i>
+                    <span class="label mono">fi-ts-grin-beam</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-hearts"></i>
+                    <span class="label mono">fi-ts-grin-hearts</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-squint-tears"></i>
+                    <span class="label mono">fi-ts-grin-squint-tears</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-squint"></i>
+                    <span class="label mono">fi-ts-grin-squint</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-stars"></i>
+                    <span class="label mono">fi-ts-grin-stars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-tears"></i>
+                    <span class="label mono">fi-ts-grin-tears</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-tongue-squint"></i>
+                    <span class="label mono">fi-ts-grin-tongue-squint</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-tongue-wink"></i>
+                    <span class="label mono">fi-ts-grin-tongue-wink</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-tongue"></i>
+                    <span class="label mono">fi-ts-grin-tongue</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin-wink"></i>
+                    <span class="label mono">fi-ts-grin-wink</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-grin"></i>
+                    <span class="label mono">fi-ts-grin</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-h"></i>
+                    <span class="label mono">fi-ts-h</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hamburger-soda"></i>
+                    <span class="label mono">fi-ts-hamburger-soda</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hand-holding-box"></i>
+                    <span class="label mono">fi-ts-hand-holding-box</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hand-holding-seeding"></i>
+                    <span class="label mono">fi-ts-hand-holding-seeding</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-handshake"></i>
+                    <span class="label mono">fi-ts-handshake</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hat-chef"></i>
+                    <span class="label mono">fi-ts-hat-chef</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-heat"></i>
+                    <span class="label mono">fi-ts-heat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-helicopter-side"></i>
+                    <span class="label mono">fi-ts-helicopter-side</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-highlighter"></i>
+                    <span class="label mono">fi-ts-highlighter</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hiking"></i>
+                    <span class="label mono">fi-ts-hiking</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hockey-mask"></i>
+                    <span class="label mono">fi-ts-hockey-mask</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hockey-puck"></i>
+                    <span class="label mono">fi-ts-hockey-puck</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hockey-sticks"></i>
+                    <span class="label mono">fi-ts-hockey-sticks</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hotdog"></i>
+                    <span class="label mono">fi-ts-hotdog</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-house-flood"></i>
+                    <span class="label mono">fi-ts-house-flood</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hryvnia"></i>
+                    <span class="label mono">fi-ts-hryvnia</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-humidity"></i>
+                    <span class="label mono">fi-ts-humidity</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-hurricane"></i>
+                    <span class="label mono">fi-ts-hurricane</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-i"></i>
+                    <span class="label mono">fi-ts-i</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-inbox-in"></i>
+                    <span class="label mono">fi-ts-inbox-in</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-inbox-out"></i>
+                    <span class="label mono">fi-ts-inbox-out</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-j"></i>
+                    <span class="label mono">fi-ts-j</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-jam"></i>
+                    <span class="label mono">fi-ts-jam</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-k"></i>
+                    <span class="label mono">fi-ts-k</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-kerning"></i>
+                    <span class="label mono">fi-ts-kerning</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-keynote"></i>
+                    <span class="label mono">fi-ts-keynote</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-kiss-beam"></i>
+                    <span class="label mono">fi-ts-kiss-beam</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-kiss-wink-heart"></i>
+                    <span class="label mono">fi-ts-kiss-wink-heart</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-kiss"></i>
+                    <span class="label mono">fi-ts-kiss</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-knife"></i>
+                    <span class="label mono">fi-ts-knife</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-l"></i>
+                    <span class="label mono">fi-ts-l</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-laptop-code"></i>
+                    <span class="label mono">fi-ts-laptop-code</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-laugh-beam"></i>
+                    <span class="label mono">fi-ts-laugh-beam</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-laugh-squint"></i>
+                    <span class="label mono">fi-ts-laugh-squint</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-laugh-wink"></i>
+                    <span class="label mono">fi-ts-laugh-wink</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-layer-minus"></i>
+                    <span class="label mono">fi-ts-layer-minus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-layer-plus"></i>
+                    <span class="label mono">fi-ts-layer-plus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-lemon"></i>
+                    <span class="label mono">fi-ts-lemon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-lettuce"></i>
+                    <span class="label mono">fi-ts-lettuce</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-level-down-alt"></i>
+                    <span class="label mono">fi-ts-level-down-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-level-down"></i>
+                    <span class="label mono">fi-ts-level-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-level-up-alt"></i>
+                    <span class="label mono">fi-ts-level-up-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-level-up"></i>
+                    <span class="label mono">fi-ts-level-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-lightbulb-dollar"></i>
+                    <span class="label mono">fi-ts-lightbulb-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-link-alt"></i>
+                    <span class="label mono">fi-ts-link-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-link-horizontal-slash"></i>
+                    <span class="label mono">fi-ts-link-horizontal-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-link-horizontal"></i>
+                    <span class="label mono">fi-ts-link-horizontal</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-link-slash-alt"></i>
+                    <span class="label mono">fi-ts-link-slash-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-link-slash"></i>
+                    <span class="label mono">fi-ts-link-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-lira-sign"></i>
+                    <span class="label mono">fi-ts-lira-sign</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-luchador"></i>
+                    <span class="label mono">fi-ts-luchador</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-m"></i>
+                    <span class="label mono">fi-ts-m</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mailbox"></i>
+                    <span class="label mono">fi-ts-mailbox</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-meh-blank"></i>
+                    <span class="label mono">fi-ts-meh-blank</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-meh-rolling-eyes"></i>
+                    <span class="label mono">fi-ts-meh-rolling-eyes</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-melon"></i>
+                    <span class="label mono">fi-ts-melon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-message-code"></i>
+                    <span class="label mono">fi-ts-message-code</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-meteor"></i>
+                    <span class="label mono">fi-ts-meteor</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mind-share"></i>
+                    <span class="label mono">fi-ts-mind-share</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mobile-button"></i>
+                    <span class="label mono">fi-ts-mobile-button</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mobile-notch"></i>
+                    <span class="label mono">fi-ts-mobile-notch</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-money-bill-wave-alt"></i>
+                    <span class="label mono">fi-ts-money-bill-wave-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-money-bill-wave"></i>
+                    <span class="label mono">fi-ts-money-bill-wave</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-money-check-edit-alt"></i>
+                    <span class="label mono">fi-ts-money-check-edit-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-money-check-edit"></i>
+                    <span class="label mono">fi-ts-money-check-edit</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-money-check"></i>
+                    <span class="label mono">fi-ts-money-check</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-money"></i>
+                    <span class="label mono">fi-ts-money</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-moon-stars"></i>
+                    <span class="label mono">fi-ts-moon-stars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-motorcycle"></i>
+                    <span class="label mono">fi-ts-motorcycle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mug-hot-alt"></i>
+                    <span class="label mono">fi-ts-mug-hot-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mug-hot"></i>
+                    <span class="label mono">fi-ts-mug-hot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mug-tea"></i>
+                    <span class="label mono">fi-ts-mug-tea</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mug"></i>
+                    <span class="label mono">fi-ts-mug</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-mushroom"></i>
+                    <span class="label mono">fi-ts-mushroom</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-n"></i>
+                    <span class="label mono">fi-ts-n</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-noodles"></i>
+                    <span class="label mono">fi-ts-noodles</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-o"></i>
+                    <span class="label mono">fi-ts-o</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-oil-can"></i>
+                    <span class="label mono">fi-ts-oil-can</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-oil-temp"></i>
+                    <span class="label mono">fi-ts-oil-temp</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-olive-oil"></i>
+                    <span class="label mono">fi-ts-olive-oil</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-olives"></i>
+                    <span class="label mono">fi-ts-olives</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-onion"></i>
+                    <span class="label mono">fi-ts-onion</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-overline"></i>
+                    <span class="label mono">fi-ts-overline</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-p"></i>
+                    <span class="label mono">fi-ts-p</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-page-break"></i>
+                    <span class="label mono">fi-ts-page-break</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-paint-roller"></i>
+                    <span class="label mono">fi-ts-paint-roller</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pan"></i>
+                    <span class="label mono">fi-ts-pan</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-peach"></i>
+                    <span class="label mono">fi-ts-peach</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pencil-ruler"></i>
+                    <span class="label mono">fi-ts-pencil-ruler</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pennant"></i>
+                    <span class="label mono">fi-ts-pennant</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-people-poll"></i>
+                    <span class="label mono">fi-ts-people-poll</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pepper-hot"></i>
+                    <span class="label mono">fi-ts-pepper-hot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pepper"></i>
+                    <span class="label mono">fi-ts-pepper</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-percentage"></i>
+                    <span class="label mono">fi-ts-percentage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-phone-office"></i>
+                    <span class="label mono">fi-ts-phone-office</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-photo-film-music"></i>
+                    <span class="label mono">fi-ts-photo-film-music</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-photo-video"></i>
+                    <span class="label mono">fi-ts-photo-video</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-picnic"></i>
+                    <span class="label mono">fi-ts-picnic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pie"></i>
+                    <span class="label mono">fi-ts-pie</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-piggy-bank"></i>
+                    <span class="label mono">fi-ts-piggy-bank</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pineapple"></i>
+                    <span class="label mono">fi-ts-pineapple</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-plane-alt"></i>
+                    <span class="label mono">fi-ts-plane-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-plate"></i>
+                    <span class="label mono">fi-ts-plate</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-play-pause"></i>
+                    <span class="label mono">fi-ts-play-pause</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-podium-star"></i>
+                    <span class="label mono">fi-ts-podium-star</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-podium"></i>
+                    <span class="label mono">fi-ts-podium</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-poo"></i>
+                    <span class="label mono">fi-ts-poo</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-popcorn"></i>
+                    <span class="label mono">fi-ts-popcorn</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pot"></i>
+                    <span class="label mono">fi-ts-pot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-pumpkin"></i>
+                    <span class="label mono">fi-ts-pumpkin</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-puzzle-piece"></i>
+                    <span class="label mono">fi-ts-puzzle-piece</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-q"></i>
+                    <span class="label mono">fi-ts-q</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-qrcode"></i>
+                    <span class="label mono">fi-ts-qrcode</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-question-square"></i>
+                    <span class="label mono">fi-ts-question-square</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-question"></i>
+                    <span class="label mono">fi-ts-question</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-r"></i>
+                    <span class="label mono">fi-ts-r</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-racquet"></i>
+                    <span class="label mono">fi-ts-racquet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-radish"></i>
+                    <span class="label mono">fi-ts-radish</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-rectangle-barcode"></i>
+                    <span class="label mono">fi-ts-rectangle-barcode</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-rectangle-code"></i>
+                    <span class="label mono">fi-ts-rectangle-code</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-rectangle-xmark"></i>
+                    <span class="label mono">fi-ts-rectangle-xmark</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-registered"></i>
+                    <span class="label mono">fi-ts-registered</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-reply-all"></i>
+                    <span class="label mono">fi-ts-reply-all</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-republican"></i>
+                    <span class="label mono">fi-ts-republican</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-restaurant"></i>
+                    <span class="label mono">fi-ts-restaurant</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-rocket-lunch"></i>
+                    <span class="label mono">fi-ts-rocket-lunch</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ruble-sign"></i>
+                    <span class="label mono">fi-ts-ruble-sign</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-rugby-helmet"></i>
+                    <span class="label mono">fi-ts-rugby-helmet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ruler-combined"></i>
+                    <span class="label mono">fi-ts-ruler-combined</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ruler-horizontal"></i>
+                    <span class="label mono">fi-ts-ruler-horizontal</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ruler-triangle"></i>
+                    <span class="label mono">fi-ts-ruler-triangle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ruler-vertical"></i>
+                    <span class="label mono">fi-ts-ruler-vertical</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-running"></i>
+                    <span class="label mono">fi-ts-running</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-rupee-sign"></i>
+                    <span class="label mono">fi-ts-rupee-sign</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-rv"></i>
+                    <span class="label mono">fi-ts-rv</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-s"></i>
+                    <span class="label mono">fi-ts-s</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sack-dollar"></i>
+                    <span class="label mono">fi-ts-sack-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sack"></i>
+                    <span class="label mono">fi-ts-sack</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sad-cry"></i>
+                    <span class="label mono">fi-ts-sad-cry</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sad-tear"></i>
+                    <span class="label mono">fi-ts-sad-tear</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-salt-pepper"></i>
+                    <span class="label mono">fi-ts-salt-pepper</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sandwich"></i>
+                    <span class="label mono">fi-ts-sandwich</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sauce"></i>
+                    <span class="label mono">fi-ts-sauce</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sausage"></i>
+                    <span class="label mono">fi-ts-sausage</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-search-dollar"></i>
+                    <span class="label mono">fi-ts-search-dollar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-search-location"></i>
+                    <span class="label mono">fi-ts-search-location</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sensor-alert"></i>
+                    <span class="label mono">fi-ts-sensor-alert</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sensor-fire"></i>
+                    <span class="label mono">fi-ts-sensor-fire</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sensor-on"></i>
+                    <span class="label mono">fi-ts-sensor-on</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sensor-smoke"></i>
+                    <span class="label mono">fi-ts-sensor-smoke</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sensor"></i>
+                    <span class="label mono">fi-ts-sensor</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-shekel-sign"></i>
+                    <span class="label mono">fi-ts-shekel-sign</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-shopping-basket"></i>
+                    <span class="label mono">fi-ts-shopping-basket</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-shrimp"></i>
+                    <span class="label mono">fi-ts-shrimp</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-shuttle-van"></i>
+                    <span class="label mono">fi-ts-shuttle-van</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-shuttlecock"></i>
+                    <span class="label mono">fi-ts-shuttlecock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sidebar-flip"></i>
+                    <span class="label mono">fi-ts-sidebar-flip</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sidebar"></i>
+                    <span class="label mono">fi-ts-sidebar</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-skating"></i>
+                    <span class="label mono">fi-ts-skating</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-skewer"></i>
+                    <span class="label mono">fi-ts-skewer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ski-jump"></i>
+                    <span class="label mono">fi-ts-ski-jump</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-ski-lift"></i>
+                    <span class="label mono">fi-ts-ski-lift</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-skiing-nordic"></i>
+                    <span class="label mono">fi-ts-skiing-nordic</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-skiing"></i>
+                    <span class="label mono">fi-ts-skiing</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sledding"></i>
+                    <span class="label mono">fi-ts-sledding</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sleigh"></i>
+                    <span class="label mono">fi-ts-sleigh</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-smile-beam"></i>
+                    <span class="label mono">fi-ts-smile-beam</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-smog"></i>
+                    <span class="label mono">fi-ts-smog</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-smoke"></i>
+                    <span class="label mono">fi-ts-smoke</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-snow-blowing"></i>
+                    <span class="label mono">fi-ts-snow-blowing</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-snowboarding"></i>
+                    <span class="label mono">fi-ts-snowboarding</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-snowflakes"></i>
+                    <span class="label mono">fi-ts-snowflakes</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-snowmobile"></i>
+                    <span class="label mono">fi-ts-snowmobile</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-snowplow"></i>
+                    <span class="label mono">fi-ts-snowplow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-alpha-down-alt"></i>
+                    <span class="label mono">fi-ts-sort-alpha-down-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-alpha-down"></i>
+                    <span class="label mono">fi-ts-sort-alpha-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-alpha-up-alt"></i>
+                    <span class="label mono">fi-ts-sort-alpha-up-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-alpha-up"></i>
+                    <span class="label mono">fi-ts-sort-alpha-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-alt"></i>
+                    <span class="label mono">fi-ts-sort-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-amount-down-alt"></i>
+                    <span class="label mono">fi-ts-sort-amount-down-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-amount-down"></i>
+                    <span class="label mono">fi-ts-sort-amount-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-amount-up-alt"></i>
+                    <span class="label mono">fi-ts-sort-amount-up-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-amount-up"></i>
+                    <span class="label mono">fi-ts-sort-amount-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-down"></i>
+                    <span class="label mono">fi-ts-sort-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-numeric-down-alt"></i>
+                    <span class="label mono">fi-ts-sort-numeric-down-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort-numeric-down"></i>
+                    <span class="label mono">fi-ts-sort-numeric-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sort"></i>
+                    <span class="label mono">fi-ts-sort</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-space-shuttle"></i>
+                    <span class="label mono">fi-ts-space-shuttle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-spade"></i>
+                    <span class="label mono">fi-ts-spade</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sparkles"></i>
+                    <span class="label mono">fi-ts-sparkles</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-spoon"></i>
+                    <span class="label mono">fi-ts-spoon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-square-code"></i>
+                    <span class="label mono">fi-ts-square-code</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-square-terminal"></i>
+                    <span class="label mono">fi-ts-square-terminal</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-stamp"></i>
+                    <span class="label mono">fi-ts-stamp</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-starfighter"></i>
+                    <span class="label mono">fi-ts-starfighter</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-stars"></i>
+                    <span class="label mono">fi-ts-stars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-steak"></i>
+                    <span class="label mono">fi-ts-steak</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-steering-wheel"></i>
+                    <span class="label mono">fi-ts-steering-wheel</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-store-alt"></i>
+                    <span class="label mono">fi-ts-store-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-strawberry"></i>
+                    <span class="label mono">fi-ts-strawberry</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-subway"></i>
+                    <span class="label mono">fi-ts-subway</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-suitcase-alt"></i>
+                    <span class="label mono">fi-ts-suitcase-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-summer"></i>
+                    <span class="label mono">fi-ts-summer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sunrise-alt"></i>
+                    <span class="label mono">fi-ts-sunrise-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sunset"></i>
+                    <span class="label mono">fi-ts-sunset</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-surprise"></i>
+                    <span class="label mono">fi-ts-surprise</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-sushi"></i>
+                    <span class="label mono">fi-ts-sushi</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-swimmer"></i>
+                    <span class="label mono">fi-ts-swimmer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-t"></i>
+                    <span class="label mono">fi-ts-t</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-table-columns"></i>
+                    <span class="label mono">fi-ts-table-columns</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-table-layout"></i>
+                    <span class="label mono">fi-ts-table-layout</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-table-pivot"></i>
+                    <span class="label mono">fi-ts-table-pivot</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-table-rows"></i>
+                    <span class="label mono">fi-ts-table-rows</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-table-tree"></i>
+                    <span class="label mono">fi-ts-table-tree</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-alt-average"></i>
+                    <span class="label mono">fi-ts-tachometer-alt-average</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-alt-fastest"></i>
+                    <span class="label mono">fi-ts-tachometer-alt-fastest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-alt-slow"></i>
+                    <span class="label mono">fi-ts-tachometer-alt-slow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-alt-slowest"></i>
+                    <span class="label mono">fi-ts-tachometer-alt-slowest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-average"></i>
+                    <span class="label mono">fi-ts-tachometer-average</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-fast"></i>
+                    <span class="label mono">fi-ts-tachometer-fast</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-fastest"></i>
+                    <span class="label mono">fi-ts-tachometer-fastest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-slow"></i>
+                    <span class="label mono">fi-ts-tachometer-slow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer-slowest"></i>
+                    <span class="label mono">fi-ts-tachometer-slowest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tachometer"></i>
+                    <span class="label mono">fi-ts-tachometer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-taco"></i>
+                    <span class="label mono">fi-ts-taco</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tags"></i>
+                    <span class="label mono">fi-ts-tags</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tally"></i>
+                    <span class="label mono">fi-ts-tally</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-temperature-down"></i>
+                    <span class="label mono">fi-ts-temperature-down</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-temperature-frigid"></i>
+                    <span class="label mono">fi-ts-temperature-frigid</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-temperature-high"></i>
+                    <span class="label mono">fi-ts-temperature-high</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-temperature-low"></i>
+                    <span class="label mono">fi-ts-temperature-low</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-temperature-up"></i>
+                    <span class="label mono">fi-ts-temperature-up</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tenge"></i>
+                    <span class="label mono">fi-ts-tenge</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-text-slash"></i>
+                    <span class="label mono">fi-ts-text-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-thunderstorm-moon"></i>
+                    <span class="label mono">fi-ts-thunderstorm-moon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-thunderstorm-sun"></i>
+                    <span class="label mono">fi-ts-thunderstorm-sun</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-thunderstorm"></i>
+                    <span class="label mono">fi-ts-thunderstorm</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tire-flat"></i>
+                    <span class="label mono">fi-ts-tire-flat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tire-pressure-warning"></i>
+                    <span class="label mono">fi-ts-tire-pressure-warning</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tire-rugged"></i>
+                    <span class="label mono">fi-ts-tire-rugged</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tire"></i>
+                    <span class="label mono">fi-ts-tire</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tired"></i>
+                    <span class="label mono">fi-ts-tired</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tomato"></i>
+                    <span class="label mono">fi-ts-tomato</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tool-box"></i>
+                    <span class="label mono">fi-ts-tool-box</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tractor"></i>
+                    <span class="label mono">fi-ts-tractor</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-trailer"></i>
+                    <span class="label mono">fi-ts-trailer</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tram"></i>
+                    <span class="label mono">fi-ts-tram</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-treasure-chest"></i>
+                    <span class="label mono">fi-ts-treasure-chest</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-container"></i>
+                    <span class="label mono">fi-ts-truck-container</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-couch"></i>
+                    <span class="label mono">fi-ts-truck-couch</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-loading"></i>
+                    <span class="label mono">fi-ts-truck-loading</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-monster"></i>
+                    <span class="label mono">fi-ts-truck-monster</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-moving"></i>
+                    <span class="label mono">fi-ts-truck-moving</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-pickup"></i>
+                    <span class="label mono">fi-ts-truck-pickup</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-plow"></i>
+                    <span class="label mono">fi-ts-truck-plow</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-truck-ramp"></i>
+                    <span class="label mono">fi-ts-truck-ramp</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tty"></i>
+                    <span class="label mono">fi-ts-tty</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-turkey"></i>
+                    <span class="label mono">fi-ts-turkey</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-tv-music"></i>
+                    <span class="label mono">fi-ts-tv-music</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-typewriter"></i>
+                    <span class="label mono">fi-ts-typewriter</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-u"></i>
+                    <span class="label mono">fi-ts-u</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-undo"></i>
+                    <span class="label mono">fi-ts-undo</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-usd-circle"></i>
+                    <span class="label mono">fi-ts-usd-circle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-usd-square"></i>
+                    <span class="label mono">fi-ts-usd-square</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-v"></i>
+                    <span class="label mono">fi-ts-v</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-video-arrow-down-left"></i>
+                    <span class="label mono">fi-ts-video-arrow-down-left</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-video-arrow-up-right"></i>
+                    <span class="label mono">fi-ts-video-arrow-up-right</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-video-camera-alt"></i>
+                    <span class="label mono">fi-ts-video-camera-alt</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-video-plus"></i>
+                    <span class="label mono">fi-ts-video-plus</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-video-slash"></i>
+                    <span class="label mono">fi-ts-video-slash</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-volcano"></i>
+                    <span class="label mono">fi-ts-volcano</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-w"></i>
+                    <span class="label mono">fi-ts-w</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-wagon-covered"></i>
+                    <span class="label mono">fi-ts-wagon-covered</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-wall-calendars"></i>
+                    <span class="label mono">fi-ts-wall-calendars</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-wallet"></i>
+                    <span class="label mono">fi-ts-wallet</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-water-bottle"></i>
+                    <span class="label mono">fi-ts-water-bottle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-water-lower"></i>
+                    <span class="label mono">fi-ts-water-lower</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-water-rise"></i>
+                    <span class="label mono">fi-ts-water-rise</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-water"></i>
+                    <span class="label mono">fi-ts-water</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-watermelon"></i>
+                    <span class="label mono">fi-ts-watermelon</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-wheat"></i>
+                    <span class="label mono">fi-ts-wheat</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-whistle"></i>
+                    <span class="label mono">fi-ts-whistle</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-wind-warning"></i>
+                    <span class="label mono">fi-ts-wind-warning</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-windsock"></i>
+                    <span class="label mono">fi-ts-windsock</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-wrench-simple"></i>
+                    <span class="label mono">fi-ts-wrench-simple</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-x"></i>
+                    <span class="label mono">fi-ts-x</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-y"></i>
+                    <span class="label mono">fi-ts-y</span>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="icon-holder">
+                    <i class="fi fi-ts-z"></i>
+                    <span class="label mono">fi-ts-z</span>
+                </div>
+            </li>
+
+
+    </ul>
+</div>
+</body>
+</html>

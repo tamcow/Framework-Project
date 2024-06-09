@@ -1,0 +1,215 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<IS220_PROJECT.Models.Product>
+@{
+    int curPage = ViewBag.CurrentPage;
+    ViewData["Title"] = "Danh sách sản phẩm" + curPage;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<h1>Danh sách sản phẩm</h1>
+
+<div class="card">
+	<div class="card-body">
+		<div class="row m-b-30">
+			<div class="col-lg-8">
+				<div class="d-md-flex">
+					<div class="m-b-10 m-r-15">
+						<span>Phân loại</span>
+						<select id="selectCat" class="custom-select" style="min-width: 200px;" asp-items="ViewBag.Cats">
+							<option value="" selected>Tất cả</option>
+						</select>
+					</div>
+					<div class="m-b-10">
+						<span>Trạng thái</span>
+						<select	 id="selectStatus" class="custom-select" style="min-width: 200px;" asp-items="ViewBag.isInStock">
+							<option value="" disabled selected>Trạng thái</option>
+						</select>
+					</div>
+					<div class="input-affix m-b-10 m-l-15 m-t-20">
+						<i class="prefix-icon anticon anticon-search"></i>
+						<input id="search" type="text" class="form-control" placeholder="Tìm kiếm">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 text-right">
+				<a class="btn btn-primary" asp-action="Create">
+					<i class="anticon anticon-plus-circle m-r-5"></i>
+					<span>Thêm sản phẩm</span>
+				</a>
+			</div>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-hover e-commerce-table">
+				<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							Tên sản phẩm
+						</th>
+						<th>
+							Danh mục
+						</th>
+						<th>
+							Thương hiệu
+						</th>
+						<th>
+							Giá
+						</th>
+						<th>
+							Tồn kho
+						</th>
+						<th>
+							Trạng thái
+						</th>
+						<th>
+							#
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@if (Model != null)
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									@item.ProductId
+								</td>
+								<td>
+									@item.ProductName
+								</td>
+								<td>
+									@item.Cat.CatName
+								</td>							
+								<td>
+									@try
+									{
+										@item.Brand.BrandName
+									}
+									catch (NullReferenceException)
+									{
+										<span>Chưa có</span>
+									}
+								<td>
+									@item.Price.Value.ToString("#,##0")	VNĐ
+								</td>
+								<td>
+									@item.UnitsInStock
+								</td>
+								<td>
+									@if(@item.UnitsInStock.Value > 0)
+									{
+										<div class="d-flex align-items-center">
+                                            <div class="badge badge-success badge-dot m-r-10"></div>
+                                            <div>Còn hàng</div>
+                                        </div>
+									}
+									else
+									{
+										<div class="d-flex align-items-center">
+                                            <div class="badge badge-danger badge-dot m-r-10"></div>
+                                            <div>Hết hàng</div>
+                                        </div>
+									}
+								</td>
+								<td>
+									<a class="btn btn-secondary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+									<a class="btn btn-primary btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+									<a class="btn btn-danger btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+								</td>
+							</tr>
+						}
+				</tbody>
+			</table>
+			<div aria-label="Page navigation">
+				<ul class="pagination">
+					<pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminProducts" asp-route-CatID="@ViewBag.CurrentCateID" asp-route-StatusID="@ViewBag.isActive" asp-action="Index"/>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<script>
+		$(document).ready(function(){
+			jQuery("#selectCat").change(function(){
+				var catID = jQuery(this).children(":selected").index();
+				var statusID = jQuery("#selectStatus").children(":selected").index();
+				catID = parseFloat(catID);
+				statusID = parseFloat(statusID);
+				console.log(statusID);
+				$("#selectCat option").removeAttr('selected'); //remove old selection
+				$("#selectCat").eq(catID).prop('selected', 'true'); //set new selection
+				$.ajax({
+					url: '/AdminProducts/Filter',
+					datatype: 'json',
+					method: 'GET',
+					data:{
+						CatID: catID,
+						StatusID: statusID
+					},
+					async: true,
+					success: function(result){
+						if(result.status == 'success'){
+							window.location.href = result.redirectUrl;
+						}
+					},
+					error: function(xhr){
+						alert('Overload');
+					}
+				})
+			});
+			jQuery("#selectStatus").change(function(){
+				var catID = jQuery("#selectCat").children(":selected").index();
+				var statusID = jQuery(this).children(":selected").index();
+				catID = parseFloat(catID);
+				statusID = parseFloat(statusID);
+				$("#selectStatus option").removeAttr('selected'); //remove old selection
+				$("#selectStatus").eq(statusID).prop('selected', 'true'); //set new selection
+				$.ajax({
+					url: '/AdminProducts/Filter',
+					datatype: 'json',
+					method: 'GET',
+					data:{
+						CatID: catID,
+						StatusID: statusID
+					},
+					async: true,
+					success: function(result){
+						if(result.status == 'success'){
+							window.location.href = result.redirectUrl;
+						}
+					},
+					error: function(xhr){
+						alert('Overload');
+					}
+				})
+				//jQuery("#search").change(function(){
+				//	var textToSearch = jQuery("#search").val();
+					
+				//	$.ajax({
+				//		url: '/AdminProducts/Filter',
+				//		datatype: 'json',
+				//		method: 'GET',
+				//		data:{
+				//			CatID: catID,
+				//			StatusID: statusID
+				//		},
+				//		async: true,
+				//		success: function(result){
+				//			if(result.status == 'success'){
+				//				window.location.href = result.redirectUrl;
+				//			}
+				//		},
+				//		error: function(xhr){
+				//			alert('Overload');
+				//		}
+				//})
+			});
+		})
+	</script>
+}

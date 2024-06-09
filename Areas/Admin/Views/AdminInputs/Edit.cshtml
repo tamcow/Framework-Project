@@ -1,0 +1,44 @@
+﻿@model IS220_PROJECT.Models.Input
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Sửa</h1>
+
+<h4>Hóa đơn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" asp-route-id="@Model.InputId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="InputId" />
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"> Ngày tạo hóa đơn</label>
+                <div class="input-affix m-b-10">
+                    <i class="prefix-icon anticon anticon-calendar"></i>
+                    <input asp-for="Date" type="text" class="form-control datepicker-input" placeholder="Pick a date">
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lưu" class="btn btn-primary" />
+                <a class="btn btn-secondary btn-tone m-r-5" asp-controller="AdminInputDetails" asp-action="Index" asp-route-inputId="@Model.InputId">Sửa chi tiết hóa đơn</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Quay về</a>
+</div>
+
+@section Scripts{
+    <script src="~/Admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(document).ready(function(){
+			$('.datepicker-input').datepicker();
+        })
+    </script>
+}

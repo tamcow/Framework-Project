@@ -1,0 +1,146 @@
+﻿@model IS220_PROJECT.Models.Customer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<form asp-controller="AdminAccounts">
+    @if(ViewBag.AccountId != 0)
+    {
+        <input asp-for="@Model.AccountId" value="ViewBag.AccountId" hidden/>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Thông tin cơ bản</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="font-weight-semibold" for="userName">Tài khoản:</label>
+                            <input disabled type="text" class="form-control" id="userName" required placeholder="tên tài khoản" asp-for="@Model.Account.AccountName">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="font-weight-semibold" for="email">Password:</label>
+                            <input disabled type="password" class="form-control" id="password" required placeholder="mật khẩu" asp-for="@Model.Account.Password">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="font-weight-semibold" for="userRole">Loại tài khoản:</label>
+                            <select disabled class="custom-select" id="userRole" asp-for="@Model.Account.RoleId"  asp-items="ViewBag.Roles">
+                                <option value="" disabled selected>Quyền</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 m-t-30">
+                            <input disabled type="submit" value="Create" class="btn btn-primary btn-tone m-l-5" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    else
+    {
+         <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Thông tin cơ bản</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label class="font-weight-semibold" for="userName">Tài khoản:</label>
+                            <input type="text" class="form-control" id="userName" required placeholder="tên tài khoản" asp-for="@Model.Account.AccountName">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="font-weight-semibold" for="email">Password:</label>
+                            <input type="password" class="form-control" id="password" required placeholder="mật khẩu" asp-for="@Model.Account.Password">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label class="font-weight-semibold" for="userRole">Loại tài khoản:</label>
+                            <select disabled class="custom-select" id="userRole" asp-for="@Model.Account.RoleId"  asp-items="ViewBag.Roles">
+                                <option value="" disabled selected>Quyền</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 m-t-30">
+                            <input type="submit" value="Create" class="btn btn-primary btn-tone m-l-5" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</form>
+
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+@if(ViewBag.AccountId != 0){
+    <input asp-for="@Model.AccountId" value="@ViewBag.AccountId" hidden />
+}
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Thông tin cơ bản</h4>
+        </div>
+        <div class="card-body">
+            <div class="media align-items-center">
+                <div class="avatar avatar-image  m-h-10 m-r-15" style="height: 80px; width: 80px">
+                    <img src="~/images/customers/default.png" alt="">
+                </div>
+                <div class="m-l-20 m-r-20">
+                    <h5 class="m-b-5 font-size-18">Đổi ảnh đại diện</h5>
+                    <p class="opacity-07 font-size-13 m-b-0">
+                        Kích thức gợi ý: <br>
+                        120x120 Tối đa: 5MB
+                    </p>
+                </div>
+                <div class="form-group m-l-20 m-r-20">
+                        <input name="fileAva" type="file" class="form-control-file" asp-for="Avatar" />
+                        <span asp-validation-for="Avatar" class="text-danger"></span>
+                </div>
+            </div>
+            <hr class="m-v-25">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label class="font-weight-semibold" for="userName">Họ và tên:</label>
+                    <input type="text" class="form-control" id="userName" placeholder="Tên của bạn" asp-for="@Model.FullName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label class="font-weight-semibold" for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" placeholder="email" asp-for="@Model.Email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label class="font-weight-semibold" for="phoneNumber">Số điện thoại:</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Số điện thoại" asp-for="@Model.Phone">
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="font-weight-semibold" for="dob">Ngày sinh:</label>
+                    <div class="input-affix m-b-10">
+                        <i class="prefix-icon anticon anticon-calendar"></i>
+                        <input type="text" class="form-control datepicker-input" id="dob" placeholder="Ngày sinh" asp-for="@Model.Birthday">
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="font-weight-semibold" for="address">Địa chỉ</label>
+                    <input type="text" class="form-control" id="address" placeholder="Địa chỉ" asp-for="@Model.Address">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group col-md-4">
+        <button type="submit" class="btn btn-primary">
+            <i class="anticon anticon-save"></i>
+            <span>Tạo</span>
+        </button>
+        <a class="btn btn-secondary btn-tone" asp-action="Index">Quay lại</a>
+    </div>
+</div>
+</form>
+
+
+@section Scripts{
+    <script src="~/Admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script>
+        $('.datepicker-input').datepicker();
+    </script>
+}

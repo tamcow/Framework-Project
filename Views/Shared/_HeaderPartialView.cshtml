@@ -1,0 +1,70 @@
+﻿
+ <header class="header-01 inner-header fix-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <div class="logo">
+                            <a asp-controller="Home" asp-action="Index">
+                                <img src="~/assets/images/logo.png" alt="UITPro"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <nav class="mainmenu mobile-menu">
+                            <div class="mobile-btn">
+                                <a href="javascript: void(0);"><span>Menu</span><i class="twi-bars"></i></a>
+                            </div>
+                            <ul>
+                                <li class="menu-item-has-children">
+                                    <a asp-controller="Product" asp-action="Index">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a asp-controller="Home" asp-action="Laptop" >Laptop</a></li>
+                                        <li><a asp-controller="Home" asp-action="Monitor">Màn hình</a></li>
+                                        <li><a asp-controller="Home" asp-action="PC">PC</a></li>
+                                        <li><a asp-controller="Home" asp-action="OtherDevices">Thiết bị khác</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu_top">
+                                    <a asp-controller="Home" asp-action="News">Tin tức</a>
+                                </li>
+                                <li class="menu_top">
+                                    <a asp-controller="Home" asp-action="About">Về chúng tôi</a>
+                                </li>
+                                <li><a asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <div class="row header-cogs mainmenu">
+                            <a class="search search-toggles" href="javascript:void(0);" style="padding-top: 8px; padding-right:10px;"><i class="twi-search"></i></a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                            <ul style="padding-top: 0px !important;">
+                                <li class="menu-item-has-children">
+                                    <a class="user-login" href="javascript:void(0);"><i class="twi-user-circle"></i><span>Welcome,</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a asp-controller="Account" asp-action="Dashboard">Thông tin cá nhân</a></li>
+                                        <li><a asp-controller="Cart" asp-action="isPaid">Đơn hàng</a></li>
+                                        <li><a asp-controller="Account" asp-action="Logout">Đăng xuất</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a class="carts" asp-controller="Cart" asp-action="Index"><img src="~/assets/images/cart.png" alt=""></a>
+                            }
+                            else
+                            {
+                            <ul style="padding-top: 0px !important;">
+                                <li class="menu-item-has-children">
+                                    <a class="user-login" href="javascript:void(0);"><i class="twi-user-circle"></i><span>Tài khoản</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a asp-controller="Account" asp-action="Register">Đăng ký</a></li>
+                                        <li><a asp-controller="Account" asp-action="Login">Đăng nhập</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>

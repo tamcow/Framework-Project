@@ -1,0 +1,205 @@
+﻿@model IS220_PROJECT.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="page-header no-gutters has-tab">
+        <div class="d-md-flex m-b-15 align-items-center justify-content-between">
+            <div class="m-b-15">
+                <button type="submit" class="btn btn-primary">
+                    <i class="anticon anticon-save"></i>
+                    <span>Thêm</span>
+                </button>
+            </div>
+        </div>
+        <ul class="nav nav-tabs" >
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#product-edit-basic">Thông tin cơ bản</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#product-edit-option">Thông số kỹ thuật</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#product-edit-description">Mô tả</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content m-t-15">
+        <div class="tab-pane fade show active" id="product-edit-basic" >
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productName">Tên sản phẩm</label>
+                            <input type="text" class="form-control" asp-for="ProductName">
+                        </div>                         
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productSKU">SKU</label>
+                            <input type="text" class="form-control" asp-for="Sku">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productPrice">Giá bán</label>
+                            <input type="text" class="form-control" asp-for="Price">
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold">Giá nhập</label>
+                            <input type="text" class="form-control" disabled value = "0">  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productCategory">Danh mục</label>
+                            <select class="custom-select" id="productCategory" asp-for="CatId"  asp-items="ViewBag.Cats">
+                                <option value="" disabled selected>Danh mục</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productBrand">Thương hiệu</label>
+                            <select class="custom-select" id="productBrand" asp-for="BrandId"  asp-items="ViewBag.Brands">
+                                <option value="" disabled selected>Chọn brand</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productSupplier">Nhà cung cấp</label>
+                            <select class="custom-select" id="productSupplier" asp-for="SupplierId"  asp-items="ViewBag.Suppliers">
+                                <option value="" disabled selected>Nhà cung cấp</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productStatus">Số lượng</label>
+                            <input type="text" class="form-control" asp-for="UnitsInStock" disabled value = "0">  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productThumb">Hình ảnh</label>
+                            <input name="fileThumb" type="file" class="form-control-file" asp-for="Thumbnail" />
+                            <span asp-validation-for="Thumbnail" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-6">
+                          <label class="font-weight-semibold" for="flexCheckChecked">
+                            Mở bán
+                          </label>
+                          <input style="display: block; margin-left: 8px;" class="form-check-input" asp-for="Active">
+                        </div>
+                    </div>
+                    <div class="form-group align-items-center">
+                        <label class="font-weight-semibold" for="productBS">
+                        Best sellers
+                        </label>
+                        <div class="switch m-r-10">
+                            <input type="checkbox" id="productBS" asp-for="BestSellers"/>
+                            <label for="productBS"></label>
+                        </div>
+                    </div>
+                    <div class="form-group align-items-center">
+                        <label class="font-weight-semibold" for="productHL">
+                        Home flag
+                        </label>
+                        <div class="switch m-r-10">
+                            <input type="checkbox" id="productHL" asp-for="HomeFlag"/>
+                            <label for="productHL"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="product-edit-option">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productCPU">CPU</label>
+                            <input type="text" class="form-control" asp-for="Cpu">
+                        </div>                         
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productCPUDetail">Chi tiết CPU</label>
+                            <input type="text" class="form-control" asp-for="Cpudetail">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productOS">Hệ điều hành</label>
+                            <input type="text" class="form-control" asp-for="Os">
+                        </div>                         
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productRam">RAM</label>
+                            <input type="text" class="form-control" asp-for="Ram">
+                        </div>                         
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productMonitor">Màn hình</label>
+                            <input type="text" class="form-control" asp-for="MonitorDetail">
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productSize">Kích thước</label>
+                            <input type="text" class="form-control" asp-for="Size">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productHard">Loại ổ cưng</label>
+                            <input type="text" class="form-control" asp-for="TypeOfHardDrive">
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productCapacity">Dung lượng</label>
+                            <input type="text" class="form-control" asp-for="Capacity">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productGPU">GPU</label>
+                            <input type="text" class="form-control" asp-for="Gpu">
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productGPUType">Loại GPU</label>
+                            <input type="text" class="form-control" asp-for="TypeOfGpu">
+                        </div>                         
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productGPUDetail">Chi tiết GPU</label>
+                            <input type="text" class="form-control" asp-for="Gpudetail">
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="font-weight-semibold" for="productWeight">Cân nặng</label>
+                            <input type="text" class="form-control" asp-for="Weight">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="product-edit-description">
+            <div class="card">
+                <div class="card-body">
+                    <input type="text" class="form-control" asp-for="Description" />
+                    @*<div id="productDescription">
+                        <p>Special cloth alert. The key to more success is to have a lot of pillows. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. They will try to close the door on you, just open it. A major key, never panic. Don’t panic, when it gets crazy and rough, don’t panic, stay calm. They key is to have every key, the key to open every door.The other day the grass was brown, now it’s green because I ain’t give up. Never surrender. Lion! I’m up to something. Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise.</p>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div>
+    <a asp-action="Index">Hủy</a>
+</div>
+
+@section Scripts{
+    <script src="~/Admin/vendors/select2/select2.min.js"></script>
+    <script src="~/Admin/vendors/quill/quill.min.js"></script>
+    <script src="~/Admin/js/pages/e-commerce-product-edit.js"></script>
+}

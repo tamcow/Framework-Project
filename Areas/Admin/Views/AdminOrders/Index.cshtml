@@ -1,0 +1,147 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<IS220_PROJECT.Models.Order>
+@{
+    int curPage = ViewBag.CurrentPage;
+    ViewData["Title"] = "Danh sách đơn hàng - Trang " + curPage;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+  <div class="card">
+	<div class="card-body">
+		<div class="row m-b-30">
+			<div class="col-lg-8">
+                <div class="form-group">
+                    <div class="d-flex align-items-center">
+                        <input id="start" type="text" class="form-control datepicker-input" name="start" placeholder="Bắt đầu" value="@ViewBag.StartDate">
+                        <span class="p-h-10">đến</span>
+                        <input id="end" type="text" class="form-control datepicker-input" name="end" placeholder="Kết thúc" value="@ViewBag.EndDate">
+                    	<a id="clear" class="btn btn-secondary btn-tone m-l-5">Xóa</a>
+					</div>
+                </div>
+			</div>
+			<div class="col-lg-4 text-right">
+				<a class="btn btn-primary" asp-action="Create">
+					<i class="anticon anticon-plus-circle m-r-5"></i>
+					<span>Thêm hóa đơn</span>
+				</a>
+			</div>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-hover e-commerce-table">
+				<thead>
+					<tr>
+						 <th>
+                            Mã đặt hàng
+                        </th>
+                        <th>
+                            Khách hàng
+                        </th>
+                        <th>
+                            Ngày đặt hàng
+                        </th>
+                        <th>
+                            Trạng thái thanh toán
+                        </th>
+                        <th>
+                            Hình thức thanh toán
+                        </th>
+                        <th>
+                            Ghi chú
+                        </th>
+                        <th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@if (Model != null)
+						@foreach (var item in Model)
+						{
+							<tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OrderId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Customer.FullName)
+                                </td>
+                                <td>
+                                    @item.OrderDate.Value.ToString("dd/MM/yyyy")
+                                </td>
+                                <td>
+                                    @item.TransactStatus.Status
+                                </td>
+                                <td>
+									@if(@item.PaymentId != null) {
+										@item.Payment.PaymentName
+									}
+									else
+									{
+										<span>Chưa chọn hình thức thanh toán</span>	
+									}
+								</td>
+                                <td>
+                                    @item.Note
+                                </td>
+                                <td>
+                                    <a class="btn btn-secondary btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.OrderId">Edit</a> |
+                                    <a class="btn btn-primary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.OrderId">Details</a> |
+                                    <a class="btn btn-danger btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.OrderId">Delete</a>
+                                </td>
+                            </tr>
+						}
+				</tbody>
+			</table>
+            <div aria-label="Page navigation">
+				<ul class="pagination">
+					<pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminOrders" asp-route-startDate="@ViewBag.StartDate" asp-route-endDate="@ViewBag.EndDate" asp-action="Index"/>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts{
+	<script src="~/Admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(document).ready(function(){
+			$('.datepicker-input').datepicker();
+			$('#clear').click(function(){
+				$('#start').val('');
+				$('#end').val('');
+				$('#end').myFilter();
+			})
+			$.fn.myFilter = function(){
+				var start = jQuery('#start').val();
+				var end = jQuery(this).val();
+				//console.log(statusID);
+				$.ajax({
+					url: '/AdminInputs/Filter',
+					datatype: 'json',
+					method: 'GET',
+					data:{
+						startDate: start,
+						endDate: end
+					},
+					async: true,
+					success: function(result){
+						if(result.status == 'success'){
+							window.location.href = result.redirectUrl;
+						}
+					},
+					error: function(xhr){
+						alert('Overload');
+					}
+				})
+			}
+			jQuery("#start").change(function(){
+				if($('#end').val() === '')
+					alert('Nhập ngày kết thúc')
+				else
+					$("#start").myFilter()
+			});
+			jQuery("#end").change(function(){
+				if($('#start').val() === '')
+					alert('Nhập ngày bắt đầu')
+				else
+					$("#end").myFilter()
+			});
+		});
+    </script>
+}

@@ -1,0 +1,111 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<IS220_PROJECT.Models.Product>
+<!-- Shop Section Start -->
+<section class="shop-left-sidebar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="shop-sidebar">
+                    <aside class="widget widget-categories">
+                        <h3 class="widget-title">Phân loại</h3>
+                        <ul>
+                            <li><a href="#">Thương hiệu</a><i class="twi-angle-down1"></i></li>
+                            <li><a href="#">CPU</a><i class="twi-angle-down1"></i></li>
+                            <li><a href="#">RAM</a><i class="twi-angle-down1"></i></li>
+                            <li><a href="#">Loại ổ cứng</a><i class="twi-angle-down1"></i></li>
+                            <li><a href="#">Loại card đồ họa</a><i class="twi-angle-down1"></i></li>
+                            <li>
+                                <a href="#">Khuyến mãi</a>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside class="widget">
+                        <h3 class="widget-title">Giá (1000 VNĐ)</h3>
+                        <div class="price_slider_wrapper">
+                            <form action="#" method="get" class="clearfix">
+                                <div id="slider-range"></div>
+                            </form>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="results">
+                            @Model.Count kết quả
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="sort-view">
+                            <a class="view-mode active" href="#"><i class="twi-th"></i></a>
+                            <a class="view-mode" href="#"><i class="twi-bars"></i></a>
+                            <div class="sorts">
+                                <select name="sort">
+                                    <option value="">Default Sorting</option>
+                                    <option selected="selected" value="">low to high</option>
+                                    <option value="">high to low</option>
+                                    <option value="">Best Seller</option>
+                                    <option value="">Popular Products</option>
+                                </select>
+                                <i class="twi-angle-down1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @if(Model != null)
+                    {
+                        @foreach(var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-6">
+                                <div class="single-shop-product">
+                                    <div class="sp-thumb">
+                                        <a asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductId">
+                                            <img src="../images/products/@item.Thumbnail" alt="" class="">
+                                        </a>
+                                    </div>
+                                    <div class="sp-details">
+                                        <h4>@item.ProductName</h4>
+                                        <div class="product-price clearfix">
+                                            <span class="price">
+                                                <ins><span>@item.Price.Value.ToString("#,##") VNĐ</span></ins>
+                                            </span>         
+                                        </div>
+                                        <div class="sp-details-hover">
+                                            <a class="sp-cart" asp-controller="Cart" asp-action="AddToCart" asp-route-ProductId="@item.ProductId" asp-route-amount="1" asp-route-url="/Home/Laptop"><i class="twi-cart-plus"></i><span>Thêm vào giỏ hàng</span></a>
+                                            <a class="sp-wishlist" href="#"><i class="twi-heart2"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                <div aria-label="Page navigation">
+				    <ul class="pagination">
+					    <pager class="pager-container" list="@Model" asp-controller="Home" asp-action="Index"/>
+				    </ul>
+			    </div>
+                @*<div class="row">
+                    <div class="col-lg-10 offset-lg-1 col-md-12 mt-20">
+                        <div class="pagniation text-center clearfix">
+                            <a class="prev" href="#"><i class="twi-long-arrow-alt-left"></i></a>
+                            <span class="current">1</span>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a class="next" href="#"><i class="twi-long-arrow-alt-right"></i></a>
+                        </div>
+                    </div>
+                </div> *@
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shop Section End -->

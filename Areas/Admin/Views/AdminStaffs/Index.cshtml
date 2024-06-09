@@ -1,0 +1,108 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<IS220_PROJECT.Models.Staff>
+@{
+    ViewData["Title"] = "Danh sách nhân viên";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<h1>Danh sách nhân viên</h1>
+
+<div class="card">
+	<div class="card-body">
+		<div class="row m-b-30">
+			<div class="col-lg-8">
+				<div class="d-md-flex">
+					<div class="m-b-10 m-r-15">
+						<@*select class="custom-select" style="min-width: 200px;" asp-items="ViewBag.Roles">
+							<option value="" disabled selected>Chọn quyền truy cập</option>
+						</select>*@
+					</div>
+					<div class="m-b-10">
+@*						<select class="custom-select" style="min-width: 200px;" asp-items="ViewBag.isActive">
+							<option value="" disabled selected>Trạng thái</option>
+						</select>*@
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 text-right">
+				<a class="btn btn-primary" asp-action="Create">
+					<i class="anticon anticon-plus-circle m-r-5"></i>
+					<span>Thêm</span>
+				</a>
+			</div>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-hover e-commerce-table">
+				<thead>
+					<tr>
+						<th>
+							ID
+						</th>
+						<th>
+							Họ và tên
+						</th>
+						<th>
+							Ngày sinh
+						</th>
+						<th>
+							Số điện thoại
+						</th>
+						<th>
+							Địa chỉ
+						</th>
+						<th>
+							Email
+						</th>
+						<th>
+							Chức vụ
+						</th>
+						<th>
+							#
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@if (Model != null)
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									@item.StaffId
+								</td>
+								<td>
+									@item.FullName
+								</td>
+								<td>
+									@item.Birthday.Value.Date.ToString("dd/MM/yyyy")
+								</td>
+								<td>
+									@item.Phone
+								</td>
+								<td>
+									@item.Address
+								</td>
+								<td>
+									@item.Email
+								</td>
+								<td>
+									@item.Account.Role.RoleName
+								</td>
+								<td>
+									<a class="btn btn-secondary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.StaffId">Details</a> |
+									<a class="btn btn-primary btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.StaffId">Edit</a> |
+									<a class="btn btn-danger btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.StaffId">Delete</a>
+								</td>
+							</tr>
+						}
+				</tbody>
+			</table>
+			<div aria-label="Page navigation">
+				<ul class="pagination">
+					<pager class="pager-container" list="@Model" asp-area="Admin" asp-controller="AdminCustomers" asp-action="Index"/>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

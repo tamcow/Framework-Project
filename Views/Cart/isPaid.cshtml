@@ -1,0 +1,87 @@
+﻿@model List<IS220_PROJECT.Models.CustomerInvoice>
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Banner Start -->
+<section class="page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="round-shape"></span>
+                <h2 class="banner-title">ĐƠN HÀNG</h2>
+                <div class="bread-crumb"><a asp-controller="Home" asp-action="Index">TRANG CHỦ</a> / ĐƠN HÀNG</div>
+            </div>
+        </div>
+    </div>
+</section>    
+<!-- Banner End -->
+
+<!-- Cart Section Start -->
+<section class="cart-section">
+    <div class="container">
+        <div class="row">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th class="product-name-thumbnail">MÃ HÓA ĐƠN</th>
+                            <th class="product-price">NGÀY ĐẶT</th>
+                            <th class="product-quantity">TỔNG TIỀN</th>
+                            <th class="product-total">TRẠNG THÁI</th>
+                            <th class="product-total">NGÀY GIAO HÀNG</th>
+                            <th class="product-remove">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(@Model != null)
+                        {
+                            @foreach(var item in @Model)
+                            {
+                                <tr class="cart-item">
+                                    <td class="product-thumbnail-title">
+                                        <a class="product-name" href="#">@item.OrderId</a> 
+                                    </td> 
+                                    <td class="product-thumbnail-title">
+                                        <a class="product-price" href="#">@item.OrderDate.Value.Date.ToString("dd/MM/yyyy")</a> 
+                                    </td>
+                                    <td class="product-unit-price">
+                                        <div class="product-price clearfix">
+                                            <span class="price">
+                                                <span>@item.Total.Value.ToString("#,##") <span class="woocommerce-Price-currencySymbol">VNĐ</span></span>
+                                            </span>           
+                                        </div>
+                                    </td>
+                                    <td class="product-thumbnail-title">
+                                        <a class="product-total" href="#">@item.TransactStatus</a> 
+                                    </td>
+                                    <td class="product-thumbnail-title">
+                                        <a class="product-total" href="#">@item.ShipDate.Value.Date.ToString("dd/MM/yyyy")</a> 
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td rowspan="5">
+                                    Chưa có đơn hàng nào
+                                </td>
+                            </tr>
+                        }
+                        <tr>
+                            <td colspan="6" class="actions">
+                                <a asp-controller="Home" asp-action="Index" class="button continue-shopping">TIẾP TỤC MUA HÀNG</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Cart Section End -->
+
+
+
+

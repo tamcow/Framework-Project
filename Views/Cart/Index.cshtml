@@ -1,0 +1,199 @@
+﻿@model List<IS220_PROJECT.Models.CustomerInvoice>
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Banner Start -->
+<section class="page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="round-shape"></span>
+                <h2 class="banner-title">Giỏ hàng</h2>
+                <div class="bread-crumb"><a asp-controller="Home" asp-action="Index">TRANG CHỦ</a> / GIỎ HÀNG</div>
+            </div>
+        </div>
+    </div>
+</section>    
+<!-- Banner End -->
+
+<!-- Cart Section Start -->
+<section class="cart-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="woocommerce-cart-form" action="#">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th class="product-name-thumbnail">TÊN SẢN PHẨM</th>
+                                <th class="product-price">GIÁ</th>
+                                <th class="product-quantity">SỐ LƯỢNG</th>
+                                <th class="product-total">THÀNH TIỀN</th>
+                                <th class="product-remove">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if(@Model != null)
+                            {
+                                @foreach(var item in @Model)
+                                {
+                                    <tr class="cart-item">
+                                        <td class="product-thumbnail-title">
+                                            @*<div hidden>@item.OrderDetailId</div>*@
+                                            <a href="#">
+                                                <img src="../images/products/@item.Thumbnail" alt="">
+                                            </a>
+                                            <a class="product-name" href="#">@item.ProductName</a> 
+                                        </td>
+                                        <td class="product-unit-price">
+                                            <div class="product-price clearfix">
+                                                <span class="price">
+                                                    <span>@item.Price.Value.ToString("#,##") <span class="woocommerce-Price-currencySymbol">VNĐ</span></span>
+                                                </span>           
+                                            </div>
+                                        </td>
+                                        <td class="product-quantity clearfix">
+                                            <div class="quantityd clearfix">
+                                                <button class="qtyBtn btnMinus"><span>-</span></button>
+                                                <input id="@item.OrderDetailId" value="@item.Quantity" title="Qty" class="input-text qty text carqty" type="text">
+                                                <button class="qtyBtn btnPlus">+</button>
+                                            </div>
+                                            <a id="update_item" onclick="updateCart(@item.OrderDetailId)" class="button update" style="min-width: 100px; margin-top:5px;">Lưu</a>
+                                        </td>
+                                        <td class="product-total">
+                                            <div class="product-price clearfix">
+                                                <span class="price">
+                                                    <span>@item.Total.Value.ToString("#,##") <span class="woocommerce-Price-currencySymbol">VNĐ</span></span>
+                                                </span>           
+                                            </div>
+                                        </td>
+                                        <td class="product-remove">
+                                            <a asp-action="UpdateCart" asp-route-id="@item.OrderDetailId" asp-route-amount="0"></a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td rowspan="5">
+                                        Chưa có đơn hàng nào
+                                    </td>
+                                </tr>
+                            }
+                            <tr>
+                                <td colspan="6" class="actions">
+                                    @if(@Model.Count > 0){
+                                        <a asp-action="DeleteAllItem" asp-route-OrderId="@Model[0].OrderId" class="button clear-cart">XÓA TOÀN BỘ</a>
+                                    }
+                                    <a asp-controller="Home" asp-action="Index" class="button continue-shopping">TIẾP TỤC MUA HÀNG</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="coupon">
+                                <h3>MÃ GIẢM GIÁ</h3>
+                                <p>
+                                    Nhập mã giảm giá tại đây
+                                </p>
+                                <input type="text" name="coupon_code" placeholder="Nhập mã"> 
+                                <a href="#" class="button" name="apply_coupon">KIỂM TRA</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="cart-totals">
+                                <h2>TÓM TẮT ĐƠN HÀNG</h2>
+                                <table class="shop-table">
+                                    <tbody>
+                                        <tr class="cart-subtotal">
+                                            <th>Tạm tính</th>
+                                            <td data-title="Subtotal">
+                                                <span class="woocommerce-Price-amount amount">
+                                                    @{
+                                                        int total = 0;
+                                                        foreach(var item in Model)
+                                                        {
+                                                            total += item.Total.Value; 
+                                                        }
+                                                    }   
+                                                    @total.ToString("#,##")
+                                                 <span class="woocommerce-Price-currencySymbol">VNĐ</span></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="cart-subtotal">
+                                            <th>Khuyến mãi</th>
+                                            <td data-title="Subtotal">
+                                                <span class="woocommerce-Price-amount amount">0.0</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="order-total">
+                                            <th>Thành tiền</th>
+                                            <td data-title="Subtotal">
+                                                <span class="woocommerce-Price-amount amount">@total.ToString("#,##") <span class="woocommerce-Price-currencySymbol">VNĐ</span></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="wc-proceed-to-checkout">
+                                    @if(@Model.Count > 0)
+                                    {
+                                        <a onclick="confirmPay()" asp-action="Payment" asp-route-OrderId="@Model[0].OrderId" class="checkout-button">ĐẶT HÀNG</a>
+                                    }
+                                    else
+                                    {
+                                        <a onclick="alert('Thêm sản phẩm để thanh toán')" class="checkout-button">ĐẶT HÀNG</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Cart Section End -->
+@section Scripts{
+	<script>
+        function updateCart(num){
+            var _amount = $("#"+num).val();
+            //console.log(num);
+            //console.log(amount.val());
+            //$.get('/Cart/UpdateCart', function(data, status)
+            //{
+            //    alert("Data: " + data + "\nStatus: " + status)
+            //});
+
+			$.ajax({
+				url: '/Cart/UpdateCart',
+				datatype: 'json',
+				method: 'GET',
+				data:{
+					id: num,
+					amount: _amount
+				},
+				async: true,
+				success: function(result){
+					if(result.status == 'success'){
+						window.location.href = result.redirectUrl;
+					}
+				},
+				error: function(xhr){
+					alert('Overload');
+				}
+			});
+        }
+        function confirmPay(){
+            $(window).bind('beforeunload', function(){
+              return 'Bạn có xác nhận thanh toán hay không?';
+            });
+        }
+	</script>
+}
+
+
+

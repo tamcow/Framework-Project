@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+        <!-- Banner Start -->
+        <section class="page-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <span class="round-shape"></span>
+                        <h2 class="banner-title">Liên hệ</h2>
+                        <div class="bread-crumb"><a asp-action="Index">TRANG CHỦ</a> / Liên hệ</div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <!-- Banner End -->
+
+        <!-- History Section Start -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7">
+                        <h3 class="sec-title">Cửa hàng của chúng tôi</h3>
+                        <div class="info-contact">
+                            <h5>Địa chỉ: <p> 153 Lý Thường Kiệt, Phường 7, Quận 11, Tp. Hồ Chí Minh</p></h5>
+                            <h5>Điện thoại: <p> +84 902 34 48 35</p></h5>
+                            <h5>Email: <p> cskh@uitpro.vn</p></h5>
+                            <h5>Mạng xã hội: 
+                                <a href="#"><i class="twi-facebook"></i></a>
+                                <a href="#"><i class="twi-twitter-square"></i></a>
+                                <a href="#"><i class="twi-pinterest-square"></i></a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <div class="contact-thumb">
+                            <img src="../images/about/first.jpg" style="width: 100%;" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mar-top-bottom">
+                    <div class="col-lg-12">
+                        <div class="map grayscale">
+                            @*<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=Tân phước plaza&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.gachacute.com/">www.gachacute.com</a></div><style>.mapouter{position:relative;text-align:right;height:600px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style></div>*@
+                            <iframe src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=Tân phước plaza&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"  scrolling="no"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="sec-title">Bạn có muốn nhắn gửi gì tới chúng tôi không?</h2>
+                        <p class="sec-desc">
+                            UITPro luôn đón nhận ý kiến của khách hàng để cải thiện dịch vụ tốt nhất 
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="contact-form text-center">
+                            <form action="#" method="post" id="contact-form" class="row">
+                                <div class="col-lg-4 col-md-4">
+                                    <input type="text" name="con_name" class="required" placeholder="Enter your name">
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <input type="email" name="con_email" class="required" placeholder="Your Email">
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <input type="text" name="con_subject" placeholder="Subject">
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <textarea name="con_message" class="required" placeholder="Your message here"></textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="btn">Shoot</button>
+                                    <img src="../assets/images/ajax.gif" alt="" class="loader"/>
+                                    <div class="con_message"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- History Section End -->
+

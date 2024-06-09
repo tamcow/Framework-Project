@@ -1,0 +1,81 @@
+﻿@model IS220_PROJECT.Models.Customer
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ChangePasswordViewModel changePassword = new ChangePasswordViewModel {
+                AccountId = @Model.AccountId.Value
+    };
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5 col-md-12">
+            <div class="ps-img">
+                @if(@Model.Avatar == null)
+                {
+                    <img src="~/images/customers/default.png" style="width:100%;" alt="">
+                }
+                else
+                {
+                    <img src="~/images/customers/@Model.Avatar" alt="">
+                }
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-12">
+            <h3 class="sec-title">Thông tin cá nhân</h3>
+            <div class="register-form">
+                <form asp-action="Dashboard" method="post" enctype="multipart/form-data">
+                    <input hidden asp-for="CustomerId" />
+                    <input hidden asp-for="AccountId" />
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label class="font-weight-semibold">Họ và tên</label>
+                            <input type="text" asp-for="FullName" placeholder="Your Name">
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="font-weight-semibold">Ảnh đại diện</label>
+                            <input asp-for="Avatar" name="fileAva" value="@Model.Avatar" type="file" class="form-control-file"/>
+                            <span asp-validation-for="Avatar" class="text-danger"></span>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="font-weight-semibold">Ngày sinh</label>
+                            <div class="input-affix m-b-10">
+                                <i class="prefix-icon anticon anticon-calendar" style="top:30% !important;" ></i>
+                                <input type="text" class="form-control datepicker-input" placeholder="Ngày sinh" asp-for="Birthday">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="font-weight-semibold">Số điện thoại</label>
+                            <input asp-for="Phone" disabled type="number" placeholder="Phone">
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="font-weight-semibold">Địa chỉ</label>
+                            <input asp-for="Address" type="text" placeholder="Nhập địa chỉ">
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="font-weight-semibold">Email</label>
+                            <input type="email" asp-for="Email" disabled placeholder="Email">
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="font-weight-semibold">Tài khoản</label>
+                            <input type="text" asp-for="Account.AccountName" disabled placeholder="Tài khoản">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <input style="float: right;" type="submit" name="submit" value="Cập nhật">
+                    </div>                
+                </form>
+            </div>
+            <div class="mt-5">
+                <h5>Thay đổi mật khẩu</h5>
+                @await Html.PartialAsync("~/Views/Shared/_ChangePasswordPartialView.cshtml", changePassword)
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/Admin/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script>
+        $('.datepicker-input').datepicker();
+    </script>
+}

@@ -1,0 +1,101 @@
+﻿@model IS220_PROJECT.Models.Staff
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin nhân viên";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Chỉnh sửa thông tin nhân viên</h1>
+<form asp-action="Edit" asp-route-id="@Model.StaffId" enctype="multipart/form-data" method="post">
+<input hidden asp-for="@Model.StaffId" />
+<input hidden asp-for="@Model.AccountId" />
+<div class="container">
+    <div class="tab-content m-t-15">
+        <div class="tab-pane fade show active" id="tab-account" >
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Thông tin cơ bản</h4>
+                </div>
+                <div class="card-body">
+                    <div class="media align-items-center">
+                        <div class="avatar avatar-image" style="width: 150px; height:150px">
+                            @if(@Model.Avatar == null){
+                                <img src="~/images/staffs/default.png" alt="">
+                            }
+                            else{
+                                <img src="~/images/staffs/@Model.Avatar" alt="">
+                            }
+                        </div>
+                        <div class="m-l-20 m-r-20">
+                            <h5 class="m-b-5 font-size-18">Đổi ảnh đại diện</h5>
+                            <p class="opacity-07 font-size-13 m-b-0">
+                                Kích thức gợi ý: <br>
+                                120x120 Tối đa: 5MB
+                            </p>
+                        </div>
+                        <div class="form-group m-l-20 m-r-20">
+                                <input name="fileAva" type="file" class="form-control-file" asp-for="Avatar" />
+                                <span asp-validation-for="Avatar" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <ul class="list-unstyled m-t-10">
+                                <li class="row">
+                                    <p class="col-sm-4 col-4 font-weight-semibold text-dark m-b-5">
+                                        <i class="m-r-10 text-primary anticon anticon-user"></i>
+                                        <span>Tài khoản: </span> 
+                                    </p>
+                                    <p class="col font-weight-semibold"> @Model.Account.AccountName</p>
+                                </li>
+                                <li class="row">
+                                    <p class="col-sm-4 col-4 font-weight-semibold text-dark m-b-5">
+                                        <i class="m-r-10 text-primary anticon anticon-lock"></i>
+                                        <span>Mật khẩu: </span> 
+                                    </p>
+                                    <p class="col font-weight-semibold"> @Model.Account.Password</p>
+                                </li>
+                                <li class="row">
+                                    <a class="btn btn-primary btn-tone m-r-5" asp-controller="AdminAccounts" asp-action="Edit" asp-route-id="@Model.AccountId">Thay đổi thông tin tài khoản</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="m-v-25">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-semibold" for="userName">Họ và tên:</label>
+                                <input type="text" class="form-control" id="userName" placeholder="Tên của bạn" asp-for="@Model.FullName">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-semibold" for="email">Email:</label>
+                                <input type="text" class="form-control" id="email" placeholder="email" asp-for="@Model.Email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label class="font-weight-semibold" for="phoneNumber">Số điện thoại:</label>
+                                <input type="text" class="form-control" id="phoneNumber" placeholder="Số điện thoại" asp-for="@Model.Phone">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="font-weight-semibold" for="dob">Ngày sinh:</label>
+                                <input type="text" class="form-control" id="dob" placeholder="Ngày sinh" asp-for="@Model.Birthday">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label class="font-weight-semibold" for="address">Địa chỉ</label>
+                                <input type="text" class="form-control" id="address" placeholder="Địa chỉ" asp-for="@Model.Address">
+                            </div>
+                            
+                        </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="form-group col-md-4">
+        <button type="submit" class="btn btn-primary">
+            <i class="anticon anticon-save"></i>
+            <span>Sửa</span>
+        </button>
+        <a class="btn btn-secondary btn-tone" asp-action="Index">Quay lại</a>
+    </div>
+</div>
+</form>

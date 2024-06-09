@@ -1,0 +1,163 @@
+﻿@model IEnumerable<IS220_PROJECT.Models.Invoice>
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="card">
+    <div class="card-body">
+        <div id="invoice" class="p-h-30">
+            <div class="m-t-15 lh-2">
+                <div class="inline-block">
+                    <img class="img-fluid" src="assets/images/logo/logo.png" alt="">
+                    <address class="p-l-10">
+                        <span class="font-weight-semibold text-dark">UIT Pro, Inc.</span><br>
+                        <span>Đường số 11, KDC Phước Kiển, Xã Phước Kiển, Huyện Nhà Bè, Hồ Chí Minh</span><br>
+                        <abbr class="text-dark">Phone:</abbr>
+                        <span>+84 902 34 48 35</span>
+                    </address>
+                </div>
+                <div class="float-right">
+                    <h2>Hóa đơn nhập hàng</h2>
+                </div>
+            </div>
+            <div class="row m-t-20 lh-2">
+                <div class="col-sm-9">
+                    <h3 class="p-l-10 m-t-10">Bên bán:</h3>
+                    <address class="p-l-10 m-t-10">
+                        <span class="font-weight-semibold text-dark">Công ty TNHH Một Thành Viên Công Nghệ Thông Tin Thế Giới Di Động</span><br>
+                        <span>Lô T2-1.2 đường D1, Khu Công Nghệ Cao, Phường Tân Phú, TP. Thủ Đức, TP.HCM</span><br>
+                        <span>028.3812.5960</span>
+                    </address>
+                </div>
+                <div class="col-sm-3">
+                    <div class="m-t-80">
+                        <div class="text-dark text-uppercase d-inline-block">
+                            <span class="font-weight-semibold text-dark">Số hóa đơn : #@Model.FirstOrDefault().InputId</span></div>
+                        <div class="float-right"></div>
+                    </div>
+                    <div class="text-dark text-uppercase d-inline-block">
+                        <span class="font-weight-semibold text-dark">Date : @Model.FirstOrDefault().Date.Value.ToString("dd/MM/yyyy")</span>
+                    </div>
+                    <div class="float-right"></div>
+                </div>
+            </div>
+            <div class="m-t-20">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng</th>
+                                <th>Giá</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                              @if(@Model != null)
+                                foreach(var item in @Model){
+                                    <tr>
+                                        <td></td>
+                                        <td>@item.ProductId</td>
+                                        <td>@item.ProductName</td>
+                                        <td>@item.Quantity</td>
+                                        <td>@item.InputPrice.Value.ToString("#,##") VND</td>
+                                        <td></td>
+                                    </tr>
+                                }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row m-t-30 lh-1-8">
+                    <div class="col-sm-12">
+                        <div class="float-right text-right">
+                            <p id="temp">Tạm tính:  </p>
+                            <p id="vat">vat (10%) :  </p>
+                            <hr>
+                            <h3 id="total"><span class="font-weight-semibold text-dark">Tổng cộng :</span> </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row m-v-20">
+                    <div class="col-sm-6">
+                        <img class="img-fluid text-opacity m-t-5" width="100" src="assets/images/logo/logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<h1>Details</h1>
+
+<div>
+    <h4>Input</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+    </dl>
+</div> *@
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FirstOrDefault().InputId">Sửa</a> |
+    <a asp-action="Index">Quay lại</a>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+            function prettierPrice(price){
+                let prettyPrice = ""
+                while(price != 0){
+                    let num = price%1000;
+                    if(num==0 && price > 1000)
+                        prettyPrice =",000" + prettyPrice;
+                    else
+                        if(String(num).length == 1 && price > 1000)
+                            prettyPrice =",00" + num + prettyPrice;
+                        else
+                            if(String(num).length == 2 && price > 1000)
+                                prettyPrice =",0" + num + prettyPrice;
+                            else
+                                prettyPrice ="," + num + prettyPrice;
+                    price = Math.floor(price/1000);
+                }
+                prettyPrice = prettyPrice.substring(1,prettyPrice.length)  + " VND";
+                return prettyPrice;
+            }
+            var rows = document.querySelectorAll('tr')
+            var count = 1
+            var sum = 0
+            rows.forEach(r => {
+                if(r.children[0].innerText == "STT")
+                    return false;
+                r.children[0].innerText = count;
+                count++;
+                let price = r.children[4].innerText;
+                price = price.replace("VND","")
+                let strPrice = price.split(",");
+                let cvPrice = ""
+                strPrice.forEach(p => {
+                   cvPrice += p;
+                })
+                sum += (parseInt(r.children[3].innerText) * parseInt(cvPrice))
+                r.children[5].innerText =  prettierPrice(parseInt(r.children[3].innerText) * parseInt(cvPrice));
+            })
+            //$.each($rows, (k, $v)=>{
+            //    $col = $v.find("td");
+            //    console.log($col)
+            //})
+            var temp = document.getElementById('temp')
+            var vat = document.getElementById('vat')
+            var total = document.getElementById('total')
+            temp.innerText += " " + prettierPrice(sum);
+            vat.innerText += " " + prettierPrice(sum*0.1);
+            total.innerText += " " + prettierPrice(sum + sum*0.1);
+        })
+    </script>
+}

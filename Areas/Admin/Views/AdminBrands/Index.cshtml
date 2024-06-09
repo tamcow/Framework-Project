@@ -1,0 +1,53 @@
+﻿@model IEnumerable<IS220_PROJECT.Models.Brand>
+
+@{
+    ViewData["Title"] = "Thương hiệu";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Thương hiệu</h1>
+<div class="card">
+	<div class="card-body">
+		<div class="text-right">
+			<a class="btn btn-primary" asp-action="Create">
+				<i class="anticon anticon-plus-circle m-r-5"></i>
+				<span>Thêm thương hiệu</span>
+			</a>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-hover e-commerce-table">
+				<thead>
+					<tr>
+						<th>
+							Thương hiệu
+						</th>
+						<th>
+							Icon
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@if (Model != null)
+						@foreach (var item in Model)
+						{
+										<tr>
+											<td>
+									@Html.DisplayFor(modelItem => item.BrandName)
+											</td>
+											<td>
+									@Html.DisplayFor(modelItem => item.Icon)
+											</td>
+											<td>
+												<a class="btn btn-secondary btn-tone m-r-5" asp-action="Details" asp-route-id="@item.BrandId">Details</a> |
+												<a class="btn btn-primary btn-tone m-r-5" asp-action="Edit" asp-route-id="@item.BrandId">Edit</a> |
+												<a class="btn btn-danger btn-tone m-r-5" asp-action="Delete" asp-route-id="@item.BrandId">Delete</a>
+											</td>
+										</tr>
+						}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
